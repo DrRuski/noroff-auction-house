@@ -4,6 +4,8 @@
   "description": "Noroff School of technology and digital media auction house website.",
   "main": "src/js/index.js",
   "scripts": {
+    "build": "sass src/scss:src/css",
+    "watch": "sass --watch src/scss:src/css",
     "format": "prettier -w src/**/*.js",
     "lint": "eslint src/**/*.js",
     "lint-fix": "eslint src/**/*.js --cache --fix",
@@ -17,7 +19,8 @@
     "e-commerce",
     "portfolio",
     "website",
-    "bootstrap"
+    "bootstrap",
+    "sass"
   ],
   "author": "Ilya Martchenko <iliamartchenko@gmail.com>",
   "license": "MIT",
@@ -29,7 +32,8 @@
     "eslint": "^8.38.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "sass": "^1.62.0"
   },
   "lint-staged": {
     "*.js": [
@@ -42,5 +46,8 @@
     "*.scss": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha3"
   }
 }
