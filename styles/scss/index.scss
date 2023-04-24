@@ -1,0 +1,25 @@
+@import "./components/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background-color: $primary-background;
+}
+
+.form-label {
+  color: #555555;
+}
+
+.form-control,
+.form-control:focus {
+  background-color: #282828;
+  color: #eee;
+  border: none;
+}
+.btn-secondary {
+  background-color: $secondary;
+  color: $primary;
+}
+.btn-secondary:hover {
+  background-color: $primary;
+  color: $secondary;
+}
