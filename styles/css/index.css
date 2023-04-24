@@ -11875,4 +11875,16 @@ body {
   color: #1c1c1c;
 }
 
+.navbar-color {
+  background-color: #191919;
+}
+
+.nav-link {
+  color: #444444;
+}
+
+.active {
+  color: #eee;
+}
+
 /*# sourceMappingURL=index.css.map */
