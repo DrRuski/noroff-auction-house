@@ -1,0 +1,27 @@
+@import "./components/variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.primaryBG {
+  background-color: $primary-background;
+}
+
+.form-label {
+  color: #555555;
+}
+
+.form-control,
+.form-control:focus {
+  background-color: #282828;
+  color: #eee;
+  border: none;
+}
+.btn-secondary {
+  background-color: $secondary;
+  color: $primary;
+}
+.btn-secondary:hover {
+  background-color: $primary;
+  color: $secondary;
+}
