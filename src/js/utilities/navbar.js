@@ -1,5 +1,5 @@
 window.addEventListener("resize", () => {
-  if (window.innerHeight > 768) {
+  if (window.innerWidth > 710) {
     document.querySelector(".navbar").classList.remove("fixed-bottom");
   } else {
     document.querySelector(".navbar").classList.add("fixed-bottom");
