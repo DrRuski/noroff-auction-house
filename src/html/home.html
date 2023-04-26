@@ -20,7 +20,10 @@
 
   <body>
     <header>
-      <nav class="navbar-color navbar" data-bs-theme="dark">
+      <nav
+        class="navbar-color navbar fixed-bottom sticky-lg-top"
+        data-bs-theme="dark"
+      >
         <div
           class="container justify-content-center justify-content-lg-between"
         >
@@ -44,25 +47,31 @@
           <ul class="nav gap-1">
             <li class="nav-item">
               <a
-                class="nav-link active d-flex flex-column align-items-center"
+                class="nav-link active d-flex flex-column align-items-center navLink"
                 aria-current="page"
                 href="#"
                 ><i class="fa-solid fa-house"></i>Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex flex-column align-items-center" href="#"
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="#"
                 ><i class="fa-solid fa-table-cells-large"></i>Collection</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex flex-column align-items-center" href="#"
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="#"
                 ><i class="fa-solid fa-user"></i> Profile</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex flex-column align-items-center" href="#"
-                ><i class="fa-solid fa-right-from-bracket"></i>Logout</a
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="#"
+                ><i class="fa-solid fa-door-open"></i>Logout</a
               >
             </li>
           </ul>
@@ -71,7 +80,216 @@
     </header>
 
     <main>
-      <section></section>
+      <section class="container d-flex flex-column gap-2">
+        <div class="d-lg-none row currencyDisplay sticky-top">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex p-1 text-center">
+              <img
+                class="img-fluid"
+                src="../../assets/Icons/slothIcon.png"
+                alt=""
+              />
+            </div>
+
+            <div class="d-flex align-items-center gap-1 p-1">
+              <div class="d-flex">
+                <img
+                  class="img-fluid"
+                  src="../../assets/Icons/Currency.png"
+                  alt=""
+                />
+              </div>
+              <p class="p-0 m-0 text-white subtext">1000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-lg-2">
+          <button
+            class="col-11 col-lg-3 btn btn-filter text-white shadow d-flex align-items-center justify-content-between"
+          >
+            Filter <i class="fa-solid fa-sort"></i>
+          </button>
+        </div>
+
+        <div class="row row-gap-3">
+          <div class="col-6 col-lg-3">
+            <div class="card h-100">
+              <div class="d-flex flex-column gap-2 shadow">
+                <div>
+                  <img
+                    src="../../assets/NFT/nftONE.png"
+                    alt=""
+                    class="img-fluid card-img"
+                  />
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <h3 class="card-title text-white">WAMEN</h3>
+                    <p class="card-text">
+                      Integer maximus facilisis diam, sit amet suscipit massa
+                      placerat cursus...
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/currencyMobileIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="nftValue">1000</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/timeIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="deadline">29.03.2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card h-100">
+              <div class="d-flex flex-column gap-2 shadow">
+                <div>
+                  <img
+                    src="../../assets/NFT/nftONE.png"
+                    alt=""
+                    class="img-fluid card-img"
+                  />
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <h3 class="card-title text-white">WAMEN</h3>
+                    <p class="card-text">
+                      Integer maximus facilisis diam, sit amet suscipit massa
+                      placerat cursus...
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/currencyMobileIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="nftValue">1000</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/timeIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="deadline">29.03.2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card h-100">
+              <div class="d-flex flex-column gap-2 shadow">
+                <div>
+                  <img
+                    src="../../assets/NFT/nftONE.png"
+                    alt=""
+                    class="img-fluid card-img"
+                  />
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <h3 class="card-title text-white">WAMEN</h3>
+                    <p class="card-text">
+                      Integer maximus facilisis diam, sit amet suscipit massa
+                      placerat cursus...
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/currencyMobileIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="nftValue">1000</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/timeIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="deadline">29.03.2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-3">
+            <div class="card h-100">
+              <div class="d-flex flex-column gap-2 shadow">
+                <div>
+                  <img
+                    src="../../assets/NFT/nftONE.png"
+                    alt=""
+                    class="img-fluid card-img"
+                  />
+                </div>
+
+                <div class="card-body">
+                  <div>
+                    <h3 class="card-title text-white">WAMEN</h3>
+                    <p class="card-text">
+                      Integer maximus facilisis diam, sit amet suscipit massa
+                      placerat cursus...
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/currencyMobileIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="nftValue">1000</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../assets/Icons/timeIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="deadline">29.03.2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

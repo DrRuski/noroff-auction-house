@@ -4,6 +4,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11850,8 +11851,73 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@media screen and (max-width: 700px) {
+  h1, .h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  h2, .h2 {
+    font-size: 1rem;
+    margin: 10px 0px;
+  }
+  h3, .h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .navLink {
+    font-size: 0.8rem;
+  }
+  h1, .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  p {
+    padding: 0;
+    margin: 0;
+    color: #eee;
+  }
+}
+@media screen and (min-width: 701px) {
+  h1, .h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  h2, .h2 {
+    font-size: 1rem;
+    margin: 10px 0px;
+  }
+  h3, .h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .navLink {
+    font-size: 1rem;
+  }
+  h1, .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  p {
+    padding: 0;
+    margin: 0;
+    color: #eee;
+  }
+}
 body {
   background-color: #181818;
+  font-family: Roboto, sans-serif;
 }
 
 .form-label {
@@ -11875,7 +11941,9 @@ body {
   color: #181818;
 }
 
-.navbar-color {
+.navbar-color,
+.currencyDisplay,
+.card {
   background-color: #242424;
 }
 
@@ -11885,6 +11953,14 @@ body {
 
 .active {
   color: #eee;
+}
+
+.subtext {
+  font-size: 14px;
+}
+
+.btn-filter {
+  background-color: #282828;
 }
 
 /*# sourceMappingURL=index.css.map */
