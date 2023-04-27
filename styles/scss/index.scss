@@ -9,7 +9,7 @@ body {
 }
 
 .form-label {
-  color: #555555;
+  color: #888888;
 }
 
 .form-control,
@@ -34,16 +34,15 @@ body {
 }
 
 .nav-link {
-  color: #6666;
+  color: #888888;
 }
+
 .active {
-  color: #eee;
+  color: $primary;
 }
 
-.subtext {
-  font-size: 14px;
-}
+// Collections Page
 
-.btn-filter {
+.tabNav {
   background-color: #282828;
 }
