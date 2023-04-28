@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Websites home page." />
+    <script
+      defer
+      src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+    <script defer src="../js/utilities/navbar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e338dcafec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../styles/css/index.css" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar-color navbar fixed-bottom sticky-lg-top"
+        data-bs-theme="dark"
+      >
+        <div
+          class="container justify-content-center justify-content-lg-between"
+        >
+          <div class="d-none d-lg-flex flex-column">
+            <img
+              src="../../assets/slothLogo.png"
+              class="img-fluid"
+              width="50px"
+              alt="Sloth Logo"
+            />
+            <div class="d-flex align-items-center justify-content-between">
+              <img
+                src="../../assets/Icons/Currency.png"
+                class="img-fluid"
+                alt="Currency Icon"
+              />
+              <p class="currencyDisplay p-0 m-0 text-white">1000</p>
+            </div>
+          </div>
+
+          <ul class="nav gap-1">
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                aria-current="page"
+                href="home.html"
+                ><i class="fa-solid fa-house"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="collection.html"
+                ><i class="fa-solid fa-table-cells-large"></i>Collection</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink active"
+                href="#"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="#"
+                ><i class="fa-solid fa-door-open"></i>Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container d-flex flex-column gap-2">
+        <div class="d-lg-none row currencyDisplay sticky-top">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex p-1 text-center">
+              <img
+                class="img-fluid"
+                src="../../assets/Icons/slothIcon.png"
+                alt=""
+              />
+            </div>
+
+            <div class="d-flex align-items-center gap-1 p-1">
+              <div class="d-flex">
+                <img
+                  class="img-fluid"
+                  src="../../assets/Icons/Currency.png"
+                  alt=""
+                />
+              </div>
+              <p class="p-0 m-0 text-white subtext">1000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row col-lg-4 m-auto mt-2 mt-lg-3">
+          <div class="d-flex justify-content-end">
+            <button
+              class="btn btn-sm btn-secondary border-primary"
+              type="button"
+            >
+              Edit <i class="fa-solid fa-gear"></i>
+            </button>
+          </div>
+
+          <div>
+            <img
+              src="../../assets/slothLogo.png"
+              alt=""
+              class="img-fluid userAvatar"
+            />
+          </div>
+
+          <div class="userName text-center">
+            <h2>SlothKing</h2>
+          </div>
+
+          <hr class="border border-primary border-1 opacity-25 my-2" />
+
+          <div class="userDescription">
+            <p>
+              Proin ligula turpis, fringilla vel lobortis consequat, consequat
+              at magna. Vestibulum convallis ligula eget lacus ullamcorper
+              dapibus. In bibendum neque justo, quis congue mauris maximus a.
+              Donec iaculis enim purus, sed varius enim lacinia eget. Mauris
+              hendrerit nulla sapien, et consectetur dolor imperdiet dignissim.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
