@@ -8,6 +8,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.main-content {
+  margin-bottom: 70px;
+}
+
 .form-label {
   color: #888888;
 }
@@ -33,7 +37,10 @@ body {
   background-color: #242424;
 }
 
-.nav-link {
+.nav-link,
+.deadline,
+.nftValue,
+.inputItemInfoText {
   color: #888888;
 }
 
@@ -45,4 +52,16 @@ body {
 
 .tabNav {
   background-color: #282828;
+}
+
+.breadcrumbLinkStyle {
+  text-decoration: none;
+}
+
+.itemLink {
+  text-decoration: none;
+}
+
+.card:hover {
+  border: 1px solid $primary;
 }

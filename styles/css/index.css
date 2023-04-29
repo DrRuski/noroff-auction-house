@@ -11882,7 +11882,7 @@ textarea.form-control-lg {
     margin: 0;
     color: #eee;
   }
-  .subtext {
+  .subtext, .breadcrumbLinkStyle {
     font-size: 14px;
   }
 }
@@ -11917,13 +11917,17 @@ textarea.form-control-lg {
     margin: 0;
     color: #eee;
   }
-  .subtext {
+  .subtext, .breadcrumbLinkStyle {
     font-size: 14px;
   }
 }
 body {
   background-color: #181818;
   font-family: Roboto, sans-serif;
+}
+
+.main-content {
+  margin-bottom: 70px;
 }
 
 .form-label {
@@ -11953,7 +11957,7 @@ body {
   background-color: #242424;
 }
 
-.nav-link {
+.nav-link, .deadline, .nftValue, .inputItemInfoText {
   color: #888888;
 }
 
@@ -11963,6 +11967,18 @@ body {
 
 .tabNav {
   background-color: #282828;
+}
+
+.breadcrumbLinkStyle {
+  text-decoration: none;
+}
+
+.itemLink {
+  text-decoration: none;
+}
+
+.card:hover {
+  border: 1px solid #ffb361;
 }
 
 /*# sourceMappingURL=index.css.map */

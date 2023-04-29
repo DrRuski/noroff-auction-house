@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Websites home page." />
+    <script
+      defer
+      src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+    <script defer src="../../js/utilities/navbar.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e338dcafec.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../../../styles/css/index.css" />
+    <title>Home</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar-color navbar fixed-bottom sticky-lg-top"
+        data-bs-theme="dark"
+      >
+        <div
+          class="container justify-content-center justify-content-lg-between"
+        >
+          <div class="d-none d-lg-flex flex-column">
+            <img
+              src="../../../assets/slothLogo.png"
+              class="img-fluid"
+              width="50px"
+              alt="Sloth Logo"
+            />
+            <div class="d-flex align-items-center justify-content-between">
+              <img
+                src="../../../assets/Icons/Currency.png"
+                class="img-fluid"
+                alt="Currency Icon"
+              />
+              <p class="currencyDisplay p-0 m-0 text-white">1000</p>
+            </div>
+          </div>
+
+          <ul class="nav gap-1">
+            <li class="nav-item">
+              <a
+                class="nav-link active d-flex flex-column align-items-center navLink"
+                aria-current="page"
+                href="../home.html"
+                ><i class="fa-solid fa-house"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="../collection.html"
+                ><i class="fa-solid fa-table-cells-large"></i>Collection</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="../profile.html"
+                ><i class="fa-solid fa-user"></i> Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link d-flex flex-column align-items-center navLink"
+                href="#"
+                ><i class="fa-solid fa-door-open"></i>Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="container d-flex flex-column gap-2 main-content">
+        <div class="d-lg-none row currencyDisplay sticky-top">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex p-1 text-center">
+              <img
+                class="img-fluid"
+                src="../../../assets/Icons/slothIcon.png"
+                alt=""
+              />
+            </div>
+
+            <div class="d-flex align-items-center gap-1 p-1">
+              <div class="d-flex">
+                <img
+                  class="img-fluid"
+                  src="../../../assets/Icons/Currency.png"
+                  alt=""
+                />
+              </div>
+              <p class="p-0 m-0 text-white subtext">1000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <nav class="d-lg-none" aria-label="breadcrumb" data-bs-theme="dark">
+            <ol class="breadcrumb m-0">
+              <li class="breadcrumb-item">
+                <a
+                  class="d-flex align-items-center gap-2 p-1 breadcrumbLinkStyle"
+                  href="../home.html"
+                  ><i class="fa-solid fa-chevron-left"></i><span>Home</span></a
+                >
+              </li>
+            </ol>
+          </nav>
+
+          <nav
+            class="d-none d-lg-block mt-2"
+            aria-label="breadcrumb"
+            data-bs-theme="dark"
+          >
+            <ol class="breadcrumb align-items-center">
+              <li class="breadcrumb-item"><a href="../home.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Library
+              </li>
+            </ol>
+          </nav>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-9 col-lg-4">
+            <div class="card h-100">
+              <div class="d-flex flex-column shadow">
+                <div>
+                  <img
+                    src="../../../assets/NFT/nftONE.png"
+                    alt=""
+                    class="img-fluid card-img"
+                  />
+                </div>
+                <div class="card-body d-flex flex-column gap-2">
+                  <div>
+                    <h3 class="card-title text-white">WAMEN</h3>
+                    <p class="card-text">
+                      Integer maximus facilisis diam, sit amet suscipit massa
+                      placerat cursus...
+                    </p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../../assets/Icons/timeIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="deadline">27.06.23 - 14.30PM GMT+1</p>
+                  </div>
+                  <div class="d-flex align-items-center gap-2">
+                    <div>
+                      <img
+                        src="../../../assets/Icons/currencyMobileIcon.png"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <p class="nftValue">4916.00 - EOD</p>
+                  </div>
+
+                  <div>
+                    <p class="subtext inputItemInfoText">
+                      You have to bid at least this much:
+                    </p>
+                    <form action="submit" class="d-flex flex-column gap-2">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          id="nftValue"
+                          class="form-control shadow"
+                          name="nftValue"
+                          placeholder="9056"
+                          required
+                        />
+                        <label class="form-label" for="nftValue"
+                          >9056.00 ,-</label
+                        >
+                      </div>
+                      <button
+                        type="button"
+                        class="d-block btn btn-sm btn-primary w-100 shadow"
+                      >
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
