@@ -11882,7 +11882,8 @@ textarea.form-control-lg {
     margin: 0;
     color: #eee;
   }
-  .subtext, .breadcrumbLinkStyle {
+  .subtext,
+  .breadcrumbLinkStyle {
     font-size: 14px;
   }
 }
@@ -11917,7 +11918,8 @@ textarea.form-control-lg {
     margin: 0;
     color: #eee;
   }
-  .subtext, .breadcrumbLinkStyle {
+  .subtext,
+  .breadcrumbLinkStyle {
     font-size: 14px;
   }
 }
@@ -11957,7 +11959,10 @@ body {
   background-color: #242424;
 }
 
-.nav-link, .deadline, .nftValue, .inputItemInfoText {
+.nav-link,
+.deadline,
+.nftValue,
+.inputItemInfoText {
   color: #888888;
 }
 
@@ -11979,6 +11984,11 @@ body {
 
 .card:hover {
   border: 1px solid #ffb361;
+}
+
+.itemImage {
+  object-fit: cover;
+  max-height: 327px;
 }
 
 /*# sourceMappingURL=index.css.map */

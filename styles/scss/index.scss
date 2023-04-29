@@ -65,3 +65,8 @@ body {
 .card:hover {
   border: 1px solid $primary;
 }
+
+.itemImage {
+  object-fit: cover;
+  max-height: 327px;
+}
