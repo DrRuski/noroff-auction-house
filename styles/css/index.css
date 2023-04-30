@@ -11886,6 +11886,12 @@ textarea.form-control-lg {
   .breadcrumbLinkStyle {
     font-size: 14px;
   }
+  .grayText {
+    color: #777;
+  }
+  .thiccFont {
+    font-weight: 500;
+  }
 }
 @media screen and (min-width: 701px) {
   h1, .h1 {
@@ -11922,6 +11928,12 @@ textarea.form-control-lg {
   .breadcrumbLinkStyle {
     font-size: 14px;
   }
+  .grayText {
+    color: #777;
+  }
+  .thiccFont {
+    font-weight: 500;
+  }
 }
 body {
   background-color: #181818;
@@ -11929,7 +11941,7 @@ body {
 }
 
 .main-content {
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .form-label {
@@ -11989,6 +12001,31 @@ body {
 .itemImage {
   object-fit: cover;
   max-height: 327px;
+}
+
+.pictureInput::placeholder {
+  background-image: url(../../assets/Icons/pngIcon.png);
+}
+
+.titleInput::placeholder {
+  background-image: url(../../assets/Icons/textIcon.png);
+}
+
+.descriptionInput::placeholder {
+  background-image: url(../../assets/Icons/descriptionIcon.png);
+}
+
+.priceInput::placeholder {
+  background-image: url(../../assets/Icons/currencyFormIcon.png);
+}
+
+.pictureInput::placeholder, .titleInput::placeholder, .descriptionInput::placeholder, .priceInput::placeholder, .userName::placeholder {
+  background-repeat: no-repeat;
+  text-indent: 30px;
+}
+
+.userName::placeholder {
+  background-image: url(../../assets/Icons/userIcon.png);
 }
 
 /*# sourceMappingURL=index.css.map */
