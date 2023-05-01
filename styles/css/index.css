@@ -12019,7 +12019,11 @@ body {
   background-image: url(../../assets/Icons/currencyFormIcon.png);
 }
 
-.pictureInput::placeholder, .titleInput::placeholder, .descriptionInput::placeholder, .priceInput::placeholder, .userName::placeholder {
+.pictureInput::placeholder,
+.titleInput::placeholder,
+.descriptionInput::placeholder,
+.priceInput::placeholder,
+.userName::placeholder {
   background-repeat: no-repeat;
   text-indent: 30px;
 }
