@@ -21,6 +21,7 @@ export async function userLogin(email, password) {
       setTimeout(() => {
         window.location.pathname = "/html/home/index.html";
       }, 1000);
+      return profile;
     } else {
       throw new Error(response.statusText);
     }
