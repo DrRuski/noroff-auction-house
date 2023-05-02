@@ -12004,7 +12004,7 @@ body {
 }
 
 .pictureInput::placeholder {
-  background-image: url(../../assets/Icons/pngIcon.png);
+  background-image: url(../../../assets/Icons/pngIcon.png);
 }
 
 .titleInput::placeholder {

@@ -7,9 +7,9 @@
     <meta name="description" content="Websites home page." />
     <script
       defer
-      src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+      src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     ></script>
-    <script defer src="../../js/utilities/navbar.js"></script>
+    <script defer src="../../../src/js/utilities/navbar.js"></script>
     <script
       src="https://kit.fontawesome.com/e338dcafec.js"
       crossorigin="anonymous"
@@ -28,12 +28,14 @@
           class="container justify-content-center justify-content-lg-between"
         >
           <div class="d-none d-lg-flex flex-column">
-            <img
-              src="../../../assets/slothLogo.png"
-              class="img-fluid"
-              width="50px"
-              alt="Sloth Logo"
-            />
+            <a href="../../profile/index.html">
+              <img
+                src="../../../assets/slothLogo.png"
+                class="img-fluid"
+                width="50px"
+                alt="Sloth Logo"
+              />
+            </a>
             <div class="d-flex align-items-center justify-content-between">
               <img
                 src="../../../assets/Icons/Currency.png"
@@ -48,7 +50,7 @@
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../home.html"
+                href="../../home/index.html"
                 ><i class="fa-solid fa-house"></i>Home</a
               >
             </li>
@@ -56,21 +58,21 @@
               <a
                 class="nav-link active d-flex flex-column align-items-center navLink"
                 aria-current="page"
-                href="../collection.html"
+                href="../../collection/index.html"
                 ><i class="fa-solid fa-table-cells-large"></i>Collection</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../profile.html"
+                href="../../profile/index.html"
                 ><i class="fa-solid fa-user"></i> Profile</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../index.html"
+                href="../../login/index.html"
                 ><i class="fa-solid fa-door-open"></i>Logout</a
               >
             </li>
@@ -110,7 +112,7 @@
               <li class="breadcrumb-item">
                 <a
                   class="d-flex align-items-center gap-2 p-1 breadcrumbLinkStyle"
-                  href="../collection.html"
+                  href="../../collection/index.html"
                   ><i class="fa-solid fa-chevron-left"></i
                   ><span>Collection</span></a
                 >
@@ -125,7 +127,7 @@
           >
             <ol class="breadcrumb align-items-center">
               <li class="breadcrumb-item">
-                <a href="../collection.html">Collection</a>
+                <a href="../../collection/index.html">Collection</a>
               </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Item Name
@@ -137,7 +139,10 @@
         <div class="row col-12 col-lg-4 m-auto">
           <div class="d-flex align-items-end justify-content-between">
             <h3>Item Information</h3>
-            <a href="../collection.html" class="btn btn-secondary shadow">
+            <a
+              href="../../collection/index.html"
+              class="btn btn-secondary shadow"
+            >
               <i class="fa-solid fa-xmark"></i>
             </a>
           </div>
@@ -191,31 +196,6 @@
                   type="date"
                   class="form-control"
                   id="dateDeadline"
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="timeDeadline"
-                  ><span class="grayText">Time Deadline</span></label
-                >
-                <input
-                  name="timeDeadline"
-                  type="time"
-                  class="form-control"
-                  id="timeDeadline"
-                  placeholder="Time Deadline"
-                  required
-                />
-              </div>
-
-              <div class="mb-3">
-                <input
-                  name="priceInput"
-                  type="number"
-                  class="form-control priceInput"
-                  id="priceInput"
-                  placeholder="Asking Price"
                   required
                 />
               </div>

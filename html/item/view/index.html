@@ -9,7 +9,7 @@
       defer
       src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     ></script>
-    <script defer src="../../js/utilities/navbar.js"></script>
+    <script defer src="../../../src/js/utilities/navbar.js"></script>
     <script
       src="https://kit.fontawesome.com/e338dcafec.js"
       crossorigin="anonymous"
@@ -28,12 +28,14 @@
           class="container justify-content-center justify-content-lg-between"
         >
           <div class="d-none d-lg-flex flex-column">
-            <img
-              src="../../../assets/slothLogo.png"
-              class="img-fluid"
-              width="50px"
-              alt="Sloth Logo"
-            />
+            <a href="../../profile/index.html">
+              <img
+                src="../../../assets/slothLogo.png"
+                class="img-fluid"
+                width="50px"
+                alt="Sloth Logo"
+              />
+            </a>
             <div class="d-flex align-items-center justify-content-between">
               <img
                 src="../../../assets/Icons/Currency.png"
@@ -49,28 +51,28 @@
               <a
                 class="nav-link active d-flex flex-column align-items-center navLink"
                 aria-current="page"
-                href="../home.html"
+                href="../../home/index.html"
                 ><i class="fa-solid fa-house"></i>Home</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../collection.html"
+                href="../../collection/index.html"
                 ><i class="fa-solid fa-table-cells-large"></i>Collection</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../profile.html"
+                href="../../profile/index.html"
                 ><i class="fa-solid fa-user"></i> Profile</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="#"
+                href="../../login/index.html"
                 ><i class="fa-solid fa-door-open"></i>Logout</a
               >
             </li>
@@ -110,7 +112,7 @@
               <li class="breadcrumb-item">
                 <a
                   class="d-flex align-items-center gap-2 p-1 breadcrumbLinkStyle"
-                  href="../home.html"
+                  href="../../home/index.html"
                   ><i class="fa-solid fa-chevron-left"></i><span>Home</span></a
                 >
               </li>
@@ -123,7 +125,9 @@
             data-bs-theme="dark"
           >
             <ol class="breadcrumb align-items-center">
-              <li class="breadcrumb-item"><a href="../home.html">Home</a></li>
+              <li class="breadcrumb-item">
+                <a href="../../home/index.html">Home</a>
+              </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Library
               </li>
