@@ -10,3 +10,9 @@ regisBtn.addEventListener("click", (e) => {
   const { username, email, password } = userData;
   userRegistration(username, email, password);
 });
+
+export function regiSuccess() {
+    regisBtn.style.border = "none";
+    regisBtn.style.backgroundColor = `#61BF73`;
+    regisBtn.innerText = `Account Created...`
+}

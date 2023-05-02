@@ -1,4 +1,5 @@
 import { apiBase, apiAuthRegis } from "../../api/api.mjs";
+import { regiSuccess } from "./form.mjs";
 
 export async function userRegistration(name, email, password) {
   try {
@@ -9,14 +10,18 @@ export async function userRegistration(name, email, password) {
       },
       body: JSON.stringify({ name, email, password }),
     });
-
+console.log(response);
     if (response.ok) {
+      regiSuccess();
       setTimeout(() => {
-        window.location.pathname = "login/index.html";
+        window.location.pathname = "/html/login/index.html";
       }, 1000);
       return await response.json();
     } else {
       throw new Error(response.statusText);
     }
-  } catch (error) {alert("There was an issue, refresh and try again")}
+  } catch (error) {
+    console.log(error);
+    alert("There was an issue, refresh and try again");
+  }
 }

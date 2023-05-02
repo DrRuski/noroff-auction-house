@@ -10,6 +10,11 @@
       src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     ></script>
     <script
+      defer
+      type="module"
+      src="../../src/js/auth/login/userLogin.mjs"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/e338dcafec.js"
       crossorigin="anonymous"
     ></script>
@@ -32,7 +37,7 @@
           <div>
             <div class="form-floating mb-3">
               <input
-                name="useremail"
+                name="email"
                 type="email"
                 class="form-control"
                 id="userEmail"
@@ -60,7 +65,9 @@
             </div>
           </div>
 
-          <button class="rounded-2 btn btn-primary" type="submit">Login</button>
+          <button class="rounded-2 btn btn-primary" type="submit" id="loginBtn">
+            Login
+          </button>
           <a
             href="../registration/index.html"
             class="rounded-2 btn btn-secondary border-primary"
