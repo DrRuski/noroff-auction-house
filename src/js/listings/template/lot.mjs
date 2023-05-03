@@ -1,6 +1,7 @@
+const lotWrapper = document.querySelector(".lotWrapper");
+
 export function lotTemplate(lotData) {
   console.log(lotData);
-  const lotWrapper = document.querySelector(".lotWrapper");
   const lotContainer = document.createElement("div");
   lotContainer.setAttribute("id", lotData.id);
   lotContainer.classList.add("col-6", "col-lg-3");
@@ -13,7 +14,7 @@ export function lotTemplate(lotData) {
           <img
             src="../../assets/NFT/nftONE.png"
             alt=""
-            class="img-fluid card-img"
+            class="img-fluid card-img lot-image itemImage"
           />
         </a>
       </div>
@@ -45,10 +46,19 @@ export function lotTemplate(lotData) {
       </div>
     </div>
   </div>`;
+ 
+  const lotPriceArray = lotData.bids.map((price) => {
+    return price.amount;
+  })
+  const lotPrice = lotPriceArray.pop()
 
-//   lotContainer.querySelector(".lot-image").src = lotData.media;
-//   lotContainer.querySelector(".lot-title").innerText = lotData.title;
-//   lotContainer.querySelector(".lot-description").innerText = lotData.description;
-//   lotContainer.querySelector(".lot-price").innerText = lotData.bids.amount;
-//   lotContainer.querySelector(".lot-deadline").innerText = lotData.endsAt;
+  lotContainer.querySelector(".lot-image").src = lotData.media;
+  lotContainer.querySelector(".lot-title").innerText = lotData.title;
+  lotContainer.querySelector(".lot-description").innerText = lotData.description;
+  lotContainer.querySelector(".lot-price").innerText = `${lotPrice}.00 ,-`;
+  lotContainer.querySelector(".lot-deadline").innerText = lotData.endsAt;
+}
+
+export function renderLotTemplates(lotDataList) {
+  lotWrapper.appendChild(...lotDataList.map(lotTemplate))
 }
