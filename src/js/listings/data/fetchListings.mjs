@@ -1,9 +1,9 @@
 import { apiBase, apiAllListings } from "../../api/api.mjs";
 import { load } from "../../storage/load.mjs";
 
-export async function getListings(limit = 30) {
+export async function fetchListings(limit = 30) {
   try {
-    const response = await fetch(`${apiBase}${apiAllListings}?limit=${limit}&_bids=true`, {
+    const response = await fetch(`${apiBase}${apiAllListings}?limit=${limit}&_bids=true&_seller=true`, {
       method: "GET",
       headers: {
         "Content-Type": "application.json",
