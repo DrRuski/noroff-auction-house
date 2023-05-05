@@ -5,10 +5,10 @@ import * as templates from "./listings/index.js";
 
 logoutUser();
 
-async function testRendering() {
+async function renderListings() {
   const listings = await fetchListings();
   const listingContainer = document.querySelector("#listingsContainer");
   templates.renderListingItems(listings, listingContainer);
 }
 
-testRendering();
+renderListings();

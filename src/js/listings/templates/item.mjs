@@ -11,7 +11,7 @@ export function listingTemplate(listingData) {
             <div>
                 <a class="itemLink" href="../item/view/index.html">
                     <img
-                    src="${placeholderImage}"
+                    src=""
                     alt=""
                     class="img-fluid card-img lot-image itemImage"
                     />
@@ -49,6 +49,8 @@ export function listingTemplate(listingData) {
 
   if (listingData.media.length > 0) {
     listingItem.querySelector(".lot-image").src = listingData.media;
+  } else {
+    listingItem.querySelector(".lot-image").src = `${placeholderImage}`;
   }
   listingItem.querySelector(".lot-title").innerText = listingData.title;
   listingItem.querySelector(".lot-description").innerText =
