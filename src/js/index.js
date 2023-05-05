@@ -1,14 +1,14 @@
+import { renderListings, renderSingleListing } from "./listings/index.js";
 import { logoutUser } from "./auth/logout/logoutUser.mjs";
-import { fetchListings } from "./listings/data/fetchListings.mjs";
-// import { renderListingItem } from "./listings/index.js";
-import * as templates from "./listings/index.js";
 
-logoutUser();
+const path = location.pathname;
 
-async function renderListings() {
-  const listings = await fetchListings();
-  const listingContainer = document.querySelector("#listingsContainer");
-  templates.renderListingItems(listings, listingContainer);
+if (path === "/html/home/index.html") {
+  renderListings();
 }
 
-renderListings();
+if (path === "/html/item/view/index.html") {
+  renderSingleListing();
+}
+
+logoutUser();

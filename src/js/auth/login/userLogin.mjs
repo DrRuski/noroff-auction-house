@@ -1,4 +1,4 @@
-import { apiBase, apiAuthLogin } from "../../api/api.mjs";
+import { apiBase, apiAuthLogin } from "../../api/apiEndpoints.mjs";
 import { loginSuccess } from "./form.mjs";
 import { save } from "../../storage/save.mjs";
 

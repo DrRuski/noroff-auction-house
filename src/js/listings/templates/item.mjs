@@ -1,5 +1,4 @@
 export function listingTemplate(listingData) {
-  console.log(listingData);
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
   listingItem.classList.add("col-6", "col-lg-3");
@@ -63,12 +62,4 @@ export function listingTemplate(listingData) {
   listingItem.querySelector(".lot-deadline").innerText = listingData.endsAt;
 
   return listingItem;
-}
-
-export function renderListingItem(listingData, parent) {
-  parent.append(listingTemplate(listingData));
-}
-
-export function renderListingItems(listingDataList, parent) {
-  parent.append(...listingDataList.map(listingTemplate));
 }
