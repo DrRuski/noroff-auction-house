@@ -9,7 +9,7 @@
       defer
       src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"
     ></script>
-    <script defer type="module" src="../../src/js/index.js"></script>
+    <script defer type="module" src="../../../src/js/index.js"></script>
     <script defer src="../../../src/js/utilities/navbar/navbar.js"></script>
     <script
       src="https://kit.fontawesome.com/e338dcafec.js"
@@ -152,7 +152,7 @@
 
           <div>
             <form id="updateUserInformation" data-bs-theme="dark">
-              <div class="input-group mb-3">
+              <div class="mb-3">
                 <input
                   name="media"
                   type="url"
@@ -163,30 +163,10 @@
                 />
               </div>
 
-              <div class="mb-3">
-                <input
-                  name="username"
-                  type="text"
-                  class="form-control userName"
-                  id="userName"
-                  placeholder="Username"
-                  required
-                  minlength="2"
-                />
-              </div>
-
-              <div class="mb-3">
-                <textarea
-                  name="descriptionInput"
-                  class="form-control descriptionInput"
-                  id="descriptionInput"
-                  rows="5"
-                  placeholder="Tell everyone a bit about yourself..."
-                  minlength="5"
-                ></textarea>
-              </div>
-
-              <button type="button" class="btn btn-primary w-100">
+              <button
+                href="/html/profile/index.html"
+                class="btn btn-primary w-100"
+              >
                 <span class="thiccFont">Save Changes</span>
               </button>
             </form>

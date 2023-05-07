@@ -1,4 +1,4 @@
-import { load } from "../../../utilities/storage/load.mjs";
+import { load } from "../../../utilities/storage/load/load.mjs";
 import { apiBase, purgeListing } from "../../apiEndpoints/apiEndpoints.mjs";
 
 export async function removeListing(id) {

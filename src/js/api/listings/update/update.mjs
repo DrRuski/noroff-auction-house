@@ -1,4 +1,4 @@
-import { load } from "../../../utilities/storage/load.mjs";
+import * as storage from "../../../utilities/storage/index.mjs"
 import {
   apiBase,
   listingBid,
@@ -11,7 +11,7 @@ export async function binOnListing(listingData) {
     method: "put",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${load("token")}`,
+      Authorization: `Bearer ${storage.load("token")}`,
     },
     body: JSON.stringify(listingData),
   });
@@ -19,15 +19,17 @@ export async function binOnListing(listingData) {
   return await response.json();
 }
 
-export async function updateUserProfile(userInfo) {
-  const updateMedia = `${userInfo}/media`;
-  const response = await fetch(`${apiBase}${updateProfile}${updateMedia}`, {
+export async function updateUserProfile(avatar) {
+  const userProfile = JSON.parse(storage.load("userProfile"));
+  const userName = userProfile.name;
+  console.log(userName);
+  const response = await fetch(`${apiBase}${updateProfile}${userName}/media`, {
     method: "put",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${load("token")}`,
+      Authorization: `Bearer ${storage.load("token")}`,
     },
-    body: JSON.stringify(userInfo),
+    body: JSON.stringify(avatar),
   });
 
   return await response.json();

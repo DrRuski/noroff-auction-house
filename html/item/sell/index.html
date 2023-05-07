@@ -154,8 +154,8 @@
           </div>
 
           <div>
-            <form id="itemInformationForm" data-bs-theme="dark">
-              <div class="input-group mb-3">
+            <form id="itemInformationForm" data-bs-theme="dark" action="submit">
+              <div class="mb-3">
                 <input
                   name="media"
                   type="url"
@@ -180,7 +180,7 @@
 
               <div class="mb-3">
                 <textarea
-                  name="postBody"
+                  name="description"
                   class="form-control descriptionInput"
                   id="descriptionInput"
                   rows="5"
@@ -194,7 +194,7 @@
                   ><span class="grayText">Date Deadline</span></label
                 >
                 <input
-                  name="dateDeadline"
+                  name="endsAt"
                   type="date"
                   class="form-control"
                   id="dateDeadline"
@@ -202,7 +202,7 @@
                 />
               </div>
 
-              <button type="button" class="btn btn-primary w-100">
+              <button class="btn btn-primary w-100">
                 <span class="thiccFont">Preview Item</span>
               </button>
             </form>

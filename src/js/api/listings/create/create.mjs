@@ -1,12 +1,13 @@
-import { load } from "../../../utilities/storage/load.mjs";
+import * as storage from "../../../utilities/storage/index.mjs"
 import { apiBase, postListing } from "../../apiEndpoints/apiEndpoints.mjs";
+
 
 export async function createListing(listingData) {
   const response = await fetch(`${apiBase}${postListing}`, {
     method: "post",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${load("token")}`,
+      Authorization: `Bearer ${storage.load("token")}`,
     },
     body: JSON.stringify(listingData),
   });

@@ -3,7 +3,7 @@ import {
   apiBase,
   apiSingleListing,
 } from "../../apiEndpoints/apiEndpoints.mjs";
-import { load } from "../../../utilities/storage/load.mjs";
+import { load } from "../../../utilities/storage/load/load.mjs";
 
 export async function getListings() {
   try {

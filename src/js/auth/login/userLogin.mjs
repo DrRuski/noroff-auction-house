@@ -1,6 +1,6 @@
 import { apiBase, apiAuthLogin } from "../../api/apiEndpoints/apiEndpoints.mjs";
 import { loginSuccess } from "./form.mjs";
-import { save } from "../../utilities/storage/save.mjs";
+import * as storage from "../../utilities/storage/index.mjs";
 
 export async function userLogin(email, password) {
   try {
@@ -14,9 +14,9 @@ export async function userLogin(email, password) {
 
     if (response.ok) {
       const profile = await response.json();
-      save("token", profile.accessToken);
+      storage.save("token", profile.accessToken);
       delete profile.accessToken;
-      save("userProfile", profile);
+      storage.save("userProfile", JSON.stringify(profile));
       loginSuccess();
       setTimeout(() => {
         window.location.pathname = "/html/home/index.html";
