@@ -1,4 +1,4 @@
-import { apiBase, apiAuthRegis } from "../../api/apiEndpoints.mjs";
+import { apiBase, apiAuthRegis } from "../../api/apiEndpoints/apiEndpoints.mjs";
 import { regiSuccess } from "./form.mjs";
 
 export async function userRegistration(name, email, password) {

@@ -1,4 +1,5 @@
-export function listingTemplate(listingData) {
+function itemTemplate(listingData) {
+  console.log(listingData);
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
   listingItem.classList.add("col-6", "col-lg-3");
@@ -6,7 +7,7 @@ export function listingTemplate(listingData) {
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
     <div class="card h-100">
-        <div class="d-flex flex-column gap-2 shadow">
+        <div class="d-flex flex-column shadow">
             <div>
                 <a class="itemLink" href="../item/view/index.html">
                     <img
@@ -44,6 +45,7 @@ export function listingTemplate(listingData) {
   const itemPriceArray = listingData.bids.map((price) => {
     return price.amount;
   });
+
   const itemPrice = itemPriceArray.pop();
 
   if (listingData.media.length > 0) {
@@ -62,4 +64,8 @@ export function listingTemplate(listingData) {
   listingItem.querySelector(".lot-deadline").innerText = listingData.endsAt;
 
   return listingItem;
+}
+
+export function renderListingItems(listingDataList, parent) {
+  parent.append(...listingDataList.map(itemTemplate));
 }

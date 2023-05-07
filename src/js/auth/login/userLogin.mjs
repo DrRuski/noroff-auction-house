@@ -1,6 +1,6 @@
-import { apiBase, apiAuthLogin } from "../../api/apiEndpoints.mjs";
+import { apiBase, apiAuthLogin } from "../../api/apiEndpoints/apiEndpoints.mjs";
 import { loginSuccess } from "./form.mjs";
-import { save } from "../../storage/save.mjs";
+import { save } from "../../utilities/storage/save.mjs";
 
 export async function userLogin(email, password) {
   try {

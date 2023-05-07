@@ -1,0 +1,14 @@
+import { load } from "../../../utilities/storage/load.mjs";
+import { apiBase, purgeListing } from "../../apiEndpoints/apiEndpoints.mjs";
+
+export async function removeListing(id) {
+  const response = await fetch(`${apiBase}${purgeListing}${id}`, {
+    method: "delete",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${load("token")}`,
+    },
+  });
+
+  return await response.json();
+}

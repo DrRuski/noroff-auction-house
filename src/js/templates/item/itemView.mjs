@@ -1,4 +1,4 @@
-export function listingViewTemplate(listingData) {
+function itemViewTemplate(listingData) {
   console.log(listingData);
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
@@ -104,12 +104,14 @@ export function listingViewTemplate(listingData) {
     ).placeholder = `${userBid}.00 ,-`;
     listingItem.querySelector(".inputLabel").innerText = `${userBid}.00 ,-`;
   } else {
-    listingItem.querySelector(
-      ".inputPlaceholder"
-    ).placeholder = `01.00 ,-`;
+    listingItem.querySelector(".inputPlaceholder").placeholder = `01.00 ,-`;
     listingItem.querySelector(".inputLabel").innerText = `01.00 ,-`;
   }
   //
 
   return listingItem;
+}
+
+export function renderListingItem(listingData, parent) {
+  parent.append(itemViewTemplate(listingData));
 }
