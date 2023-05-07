@@ -4,7 +4,7 @@ import * as templates from "./templates/index.js";
 import { logoutUser } from "./auth/logout/logoutUser.mjs";
 
 async function renderCollection() {
-  const allListings = await listings.getListings();
+  const allListings = await listings.getOwnedListings();
   const container = document.querySelector("#ownedItemsContainer");
   templates.renderOwnedListingItems(allListings, container);
 }

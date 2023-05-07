@@ -11,7 +11,7 @@ export const listingBid = "/auction/listings/";
 export const apiAllListings = "/auction/listings";
 export const apiSingleListing = "/auction/listings/";
 export const listingFiltering = "/auction/listings?_tag=my_tag&_active=true";
-export const ownedListings = "/auction/profiles";
+export const ownedListings = "/auction/profiles/";
 export const listedListings = "/auction/profiles/<name>/listings";
 export const userBiddedListings = "/auction/profiles/<name>/bids";
 

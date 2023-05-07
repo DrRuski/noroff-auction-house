@@ -2,8 +2,9 @@ import {
   apiAllListings,
   apiBase,
   apiSingleListing,
+  ownedListings,
 } from "../../apiEndpoints/apiEndpoints.mjs";
-import { load } from "../../../utilities/storage/load/load.mjs";
+import * as storage from "../../../utilities/storage/index.mjs";
 
 export async function getListings() {
   try {
@@ -12,13 +13,29 @@ export async function getListings() {
       method: "get",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${load("token")}`,
+        Authorization: `Bearer ${storage.load("token")}`,
       },
     });
 
-    const json = await response.json();
-    // console.log(json);
-    return json;
+    return await response.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function getOwnedListings() {
+  try {
+    const profile = JSON.parse(storage.load("userProfile"));
+    const ownedListing = `${apiBase}${ownedListings}${profile.name}/listings`;
+    const response = await fetch(ownedListing, {
+      method: "get",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${storage.load("token")}`,
+      },
+    });
+
+    return await response.json();
   } catch (error) {
     console.log(error);
   }
@@ -31,12 +48,11 @@ export async function getListing(id) {
       method: "get",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${load("token")}`,
+        Authorization: `Bearer ${storage.load("token")}`,
       },
     });
-    const json = await response.json();
-    console.log(json);
-    return json;
+
+    return await response.json();
   } catch (error) {
     console.log(error);
   }

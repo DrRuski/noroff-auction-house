@@ -2,7 +2,6 @@ import { createListing } from "../../api/listings/index.mjs";
 
 export function createListingItem() {
   const createForm = document.querySelector("form#itemInformationForm");
-  console.log(createForm);
 
   if (createForm) {
     createForm.addEventListener("submit", (e) => {
