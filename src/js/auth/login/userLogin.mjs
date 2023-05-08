@@ -1,5 +1,5 @@
 import { apiBase, apiAuthLogin } from "../../api/apiEndpoints/apiEndpoints.mjs";
-import { loginSuccess } from "./form.mjs";
+import { loginSuccess } from "./successStyle.mjs";
 import * as storage from "../../utilities/storage/index.mjs";
 
 export async function userLogin(email, password) {

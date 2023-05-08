@@ -5,7 +5,7 @@ import {
   updateProfile,
 } from "../../apiEndpoints/apiEndpoints.mjs";
 
-export async function binOnListing(listingData) {
+export async function bidOnListing(listingData) {
   const listingIdURL = `${listingData.id}/bids`;
   const response = await fetch(`${apiBase}${listingBid}${listingIdURL}`, {
     method: "put",
@@ -21,9 +21,7 @@ export async function binOnListing(listingData) {
 
 export async function updateUserProfile(avatar) {
   const userProfile = JSON.parse(storage.load("userProfile"));
-  const userName = userProfile.name;
-  console.log(userName);
-  const response = await fetch(`${apiBase}${updateProfile}${userName}/media`, {
+  const response = await fetch(`${apiBase}${updateProfile}${userProfile.name}/media`, {
     method: "put",
     headers: {
       "Content-Type": "application/json",
