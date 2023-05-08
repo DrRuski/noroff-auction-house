@@ -1,17 +1,6 @@
-import * as listings from "./api/listings/index.mjs";
 import * as management from "./listeners/index.mjs";
 import * as templates from "./templates/index.js";
-
-async function renderCollection() {
-  const allListings = await listings.getOwnedListings();
-  const container = document.querySelector("#ownedItemsContainer");
-  templates.renderOwnedListingItems(allListings, container);
-}
-async function renderHome() {
-  const allListings = await listings.getListings();
-  const container = document.querySelector("#listingsContainer");
-  templates.renderListingItems(allListings, container);
-}
+import * as render from "./setupRender/index.mjs";
 
 switch (window.location.pathname) {
   case "/html/login/index.html":
@@ -27,12 +16,12 @@ switch (window.location.pathname) {
   case "/html/home/index.html":
   case "/html/home/":
   case "/html/home":
-    renderHome();
+    render.renderHome();
     break;
   case "/html/collection/index.html":
   case "/html/collection/":
   case "/html/collection":
-    renderCollection();
+    render.renderCollection();
     break;
   case "/html/profile/index.html":
   case "/html/profile/":
@@ -48,6 +37,12 @@ switch (window.location.pathname) {
   case "/html/profile/edit/":
   case "/html/profile/edit":
     management.updateProfile();
+    break;
+  case "/html/item/view/index.html":
+  case "/html/item/view/":
+  case "/html/item/view":
+    render.renderSingleItem();
+
     break;
 }
 if (

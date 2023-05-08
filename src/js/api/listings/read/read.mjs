@@ -1,7 +1,6 @@
 import {
   apiAllListings,
   apiBase,
-  apiSingleListing,
   ownedListings,
 } from "../../apiEndpoints/apiEndpoints.mjs";
 import * as storage from "../../../utilities/storage/index.mjs";
@@ -41,10 +40,9 @@ export async function getOwnedListings() {
   }
 }
 
-export async function getListing(id) {
+export async function getListing(url) {
   try {
-    const getSingleUrl = `${apiBase}${apiSingleListing}${id}?_bids=true&_sellers=true`;
-    const response = await fetch(getSingleUrl, {
+    const response = await fetch(url, {
       method: "get",
       headers: {
         "Content-Type": "application/json",

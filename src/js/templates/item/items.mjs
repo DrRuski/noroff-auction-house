@@ -1,5 +1,4 @@
 function itemTemplate(listingData) {
-  console.log(listingData);
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
   listingItem.classList.add("col-6", "col-lg-3");
@@ -9,7 +8,7 @@ function itemTemplate(listingData) {
     <div class="card h-100">
         <div class="d-flex flex-column shadow">
             <div>
-                <a class="itemLink" href="../item/view/index.html">
+                <a class="itemLink" href="">
                     <img
                     src=""
                     alt=""
@@ -18,7 +17,7 @@ function itemTemplate(listingData) {
                 </a>
             </div>
             <div class="card-body">
-                <a class="itemLink" href="../item/view/index.html">
+                <a class="itemLink" href="">
                     <h3 class="card-title text-white lot-title"></h3>
                     <p class="card-text lot-description"></p>
                 </a>
@@ -47,7 +46,10 @@ function itemTemplate(listingData) {
   });
 
   const itemPrice = itemPriceArray.pop();
-
+  const itemUrl = listingItem.querySelectorAll(".itemLink");
+  itemUrl.forEach((e) => {
+    e.href = `../item/view/index.html?id=${listingData.id}`;
+  });
   if (listingData.media.length > 0) {
     listingItem.querySelector(".lot-image").src = listingData.media;
   } else {
