@@ -7,7 +7,7 @@ import * as storage from "../../../utilities/storage/index.mjs";
 
 export async function getListings() {
   try {
-    const getAllUrl = `${apiBase}${apiAllListings}?_bids=true&_sellers=true`;
+    const getAllUrl = `${apiBase}${apiAllListings}?_bids=true&_seller=true`;
     const response = await fetch(getAllUrl, {
       method: "get",
       headers: {

@@ -1,4 +1,5 @@
 function itemTemplate(listingData) {
+  console.log(listingData);
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
   listingItem.classList.add("col-6", "col-lg-3");
