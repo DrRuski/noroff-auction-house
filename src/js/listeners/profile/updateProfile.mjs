@@ -8,11 +8,13 @@ export function updateProfile() {
       e.preventDefault();
       const updateForm = e.target;
       const formData = new FormData(updateForm);
-      const avatar = Object.fromEntries(formData.entries());
-      updateUserProfile(avatar);
-      setTimeout(() => {
-        window.location.pathname = "/html/profile/index.html";
-      }, 1000);
+      const avatarUrl = formData.get("avatar");
+      const avatar = { url: avatarUrl };
+      updateUserProfile(avatar).then(() => {
+        setTimeout(() => {
+          window.location.pathname = "/html/profile/index.html";
+        }, 500);
+      });
     });
   }
 }

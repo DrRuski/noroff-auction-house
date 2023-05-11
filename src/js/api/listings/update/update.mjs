@@ -20,7 +20,7 @@ export async function bidOnListing(listingData) {
 
     return await response.json();
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
 
@@ -43,7 +43,7 @@ export async function updateUserProfile(avatar) {
     );
     if (response.ok) {
       userProfile.avatar = avatar.url;
-      storage.save(JSON.stringify(userProfile));
+      storage.save("userProfile", JSON.stringify(userProfile));
       return await response.json();
     }
   } catch (error) {

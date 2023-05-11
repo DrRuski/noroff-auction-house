@@ -50,6 +50,8 @@ function userProfileExist(userData) {
     userPage.querySelector(".userAvatar").src = `${placeholderImage}`;
   }
   userPage.querySelector(".nameText").innerText = userData.name;
+
+  
   return userPage;
 }
 
