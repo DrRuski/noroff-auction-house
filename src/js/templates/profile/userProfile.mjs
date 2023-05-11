@@ -8,10 +8,10 @@ function userProfileExist(userData) {
   userPage.classList.add(
     "row",
     "col-lg-4",
-    "m-auto",
-    "mt-2",
-    "mt-lg-3",
-    "gap-3"
+    "mx-lg-auto",
+    "my-3",
+    "gap-3",
+    "main-content"
   );
   userPage.innerHTML = `
     <div class="d-flex justify-content-end">
@@ -24,11 +24,11 @@ function userProfileExist(userData) {
     </a>
   </div>
 
-  <div>
+  <div class="d-flex flex-column">
     <img
       src=""
       alt=""
-      class="img-fluid userAvatar"
+      class="img-fluid userAvatar rounded-2"
     />
   </div>
 
@@ -51,7 +51,6 @@ function userProfileExist(userData) {
   }
   userPage.querySelector(".nameText").innerText = userData.name;
 
-  
   return userPage;
 }
 

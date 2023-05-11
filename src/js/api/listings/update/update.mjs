@@ -1,5 +1,5 @@
 import * as storage from "../../../utilities/storage/index.mjs";
-import * as templates from "../../../templates/profile/userProfile.mjs";
+
 import {
   apiBase,
   listingBid,
@@ -27,13 +27,14 @@ export async function bidOnListing(listingData) {
 export async function updateUserProfile(avatar) {
   try {
     const userProfile = JSON.parse(storage.load("userProfile"));
+
     if (userProfile.avatar) {
       delete userProfile.avatar;
     }
     const response = await fetch(
       `${apiBase}${updateProfile}${userProfile.name}/media`,
       {
-        method: "PUT",
+        method: "put",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${storage.load("token")}`,
@@ -44,7 +45,9 @@ export async function updateUserProfile(avatar) {
     if (response.ok) {
       userProfile.avatar = avatar.url;
       storage.save("userProfile", JSON.stringify(userProfile));
-      return await response.json();
+      const json = await response.json();
+      console.log(json);
+      return json;
     }
   } catch (error) {
     console.log(error);

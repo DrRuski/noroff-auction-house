@@ -12016,7 +12016,8 @@ body {
   border: 1px solid #ffb361;
 }
 
-.itemImage {
+.itemImage,
+.userAvatar {
   object-fit: cover;
   max-height: 327px;
 }

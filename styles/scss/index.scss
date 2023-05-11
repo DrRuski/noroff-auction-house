@@ -75,7 +75,8 @@ body {
   border: 1px solid $primary;
 }
 
-.itemImage {
+.itemImage,
+.userAvatar {
   object-fit: cover;
   max-height: 327px;
 }

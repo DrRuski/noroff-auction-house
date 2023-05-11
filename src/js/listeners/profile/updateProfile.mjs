@@ -13,7 +13,7 @@ export function updateProfile() {
       updateUserProfile(avatar).then(() => {
         setTimeout(() => {
           window.location.pathname = "/html/profile/index.html";
-        }, 500);
+        }, 1000);
       });
     });
   }
