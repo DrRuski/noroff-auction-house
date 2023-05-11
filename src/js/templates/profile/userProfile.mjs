@@ -2,6 +2,7 @@ import * as storage from "../../utilities/storage/index.mjs";
 import { userProfileNotExist } from "./guestProfile.mjs";
 
 function userProfileExist(userData) {
+  console.log(userData);
   document.title = userData.name;
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const userPage = document.createElement("div");
@@ -57,6 +58,7 @@ function userProfileExist(userData) {
 export function renderUserProfile() {
   const userContainer = document.querySelector("div#userPage");
   const profile = JSON.parse(storage.load("userProfile"));
+  console.log(profile);
   if (profile) {
     userContainer.append(userProfileExist(profile));
   } else {

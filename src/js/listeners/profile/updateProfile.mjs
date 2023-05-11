@@ -9,8 +9,7 @@ export function updateProfile() {
       const updateForm = e.target;
       const formData = new FormData(updateForm);
       const avatarUrl = formData.get("avatar");
-      const avatar = { url: avatarUrl };
-      updateUserProfile(avatar).then(() => {
+      updateUserProfile(avatarUrl).then(() => {
         setTimeout(() => {
           window.location.pathname = "/html/profile/index.html";
         }, 1000);

@@ -6,6 +6,7 @@ import {
   updateProfile,
 } from "../../apiEndpoints/apiEndpoints.mjs";
 
+
 export async function bidOnListing(listingData) {
   try {
     const listingIdURL = `${listingData.id}/bids`;
@@ -27,27 +28,21 @@ export async function bidOnListing(listingData) {
 export async function updateUserProfile(avatar) {
   try {
     const userProfile = JSON.parse(storage.load("userProfile"));
-
-    if (userProfile.avatar) {
-      delete userProfile.avatar;
-    }
     const response = await fetch(
       `${apiBase}${updateProfile}${userProfile.name}/media`,
       {
-        method: "put",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${storage.load("token")}`,
         },
-        body: JSON.stringify(avatar),
+        body: JSON.stringify({"avatar": avatar}),
       }
     );
     if (response.ok) {
-      userProfile.avatar = avatar.url;
+      userProfile.avatar = avatar;
       storage.save("userProfile", JSON.stringify(userProfile));
-      const json = await response.json();
-      console.log(json);
-      return json;
+      return await response.json();
     }
   } catch (error) {
     console.log(error);
