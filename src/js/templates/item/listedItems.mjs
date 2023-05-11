@@ -82,10 +82,5 @@ function listedItemsTemplate(listingData) {
 }
 
 export function renderListedItems(listingDataList, parent) {
-  const profile = JSON.parse(storage.load("userProfile"));
-  if (profile) {
     parent.append(...listingDataList.map(listedItemsTemplate));
-  } else {
-    parent.append(userProfileNotExist());
-  }
 }

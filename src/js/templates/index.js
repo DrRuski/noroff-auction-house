@@ -4,3 +4,4 @@ export * from "./item/ownedItems.mjs";
 export * from "./item/yourBidsItems.mjs";
 export * from "./item/listedItems.mjs";
 export * from "./profile/userProfile.mjs";
+export * from "./profile/guestProfile.mjs";

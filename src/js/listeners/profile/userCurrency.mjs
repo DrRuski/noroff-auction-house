@@ -3,7 +3,12 @@ const userCurrency = document.querySelectorAll(".userCurrency");
 
 export function userCurrencyDisplay() {
   const userProfile = JSON.parse(storage.load("userProfile"));
+  if (userProfile) {
+    userCurrency.forEach((e) => {
+      return e.innerHTML = JSON.stringify(userProfile.credits);
+    })
+  }
   userCurrency.forEach((e) => {
-    return e.innerHTML = JSON.stringify(userProfile.credits);
+    return e.innerHTML = "00.00 .-";
   })
 }

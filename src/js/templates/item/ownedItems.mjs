@@ -1,6 +1,3 @@
-import * as storage from "../../utilities/storage/index.mjs"
-import { userProfileNotExist } from "../profile/guestProfile.mjs";
-
 function ownedItemTemplate(listingData) {
     const placeholderImage = "../../assets/NFT/placeholderImage.png";
     const listingItem = document.createElement("div");
@@ -58,12 +55,6 @@ function ownedItemTemplate(listingData) {
 
   
   export function renderOwnedListingItems(listingDataList, parent) {
-    const profile = JSON.parse(storage.load("userProfile"));
-    if (profile) {
       parent.append(...listingDataList.map(ownedItemTemplate));
-    } else {
-      parent.append(userProfileNotExist());
-    }
-    
   }
   

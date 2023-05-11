@@ -73,10 +73,5 @@ function ownedItemTemplate(listingData) {
 }
 
 export function renderYourBidsItems(listingDataList, parent) {
-  const profile = JSON.parse(storage.load("userProfile"));
-  if (profile) {
     parent.append(...listingDataList.map(ownedItemTemplate));
-  } else {
-    parent.append(userProfileNotExist());
-  }
 }
