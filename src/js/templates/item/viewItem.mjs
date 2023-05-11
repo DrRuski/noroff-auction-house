@@ -5,39 +5,45 @@ function itemViewTemplate(listingData) {
   listingItem.setAttribute("id", listingData.id);
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
-    <div class="card h-100">
+  <div class="card h-100">
     <div class="d-flex flex-column flex-lg-row shadow">
       <div>
         <img
           src=""
           alt=""
-          class="img-fluid card-img h-100 itemImage lot-image"
-        />
+          class="img-fluid card-img h-100 itemImage lot-image"/>
       </div>
+
       <div class="card-body d-flex flex-column gap-2">
         <div>
           <h3 class="card-title text-white lot-title"></h3>
-          <p class="card-text lot-description">
-            
-          </p>
+          <p class="card-text lot-description"></p>
         </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <img
+            src=""
+            alt=""
+            class="img-fluid sellerAvatar"/>
+            <span class="sellerName subtext grayText"></span>
+        </div>
+
         <div class="d-flex align-items-center gap-2">
           <div>
             <img
               src="../../../assets/Icons/timeIcon.png"
               alt=""
-              class="img-fluid"
-            />
+              class="img-fluid"/>
           </div>
           <p class="deadline lot-deadline"></p>
         </div>
+
         <div class="d-flex align-items-center gap-2">
           <div>
             <img
               src="../../../assets/Icons/currencyMobileIcon.png"
               alt=""
-              class="img-fluid"
-            />
+              class="img-fluid"/>
           </div>
           <p class="nftValue lot-price"></p>
         </div>
@@ -54,6 +60,7 @@ function itemViewTemplate(listingData) {
                 class="form-control shadow inputPlaceholder"
                 name="nftValue"
                 placeholder=""
+                min=""
                 required
               />
               <label class="form-label inputLabel" for="nftValue"
@@ -68,6 +75,7 @@ function itemViewTemplate(listingData) {
             </button>
           </form>
         </div>
+        
       </div>
     </div>
   </div>
@@ -89,6 +97,9 @@ function itemViewTemplate(listingData) {
   listingItem.querySelector(".lot-description").innerText =
     listingData.description;
   //
+  listingItem.querySelector(".sellerName").innerText = `${listingData.seller.name} - Owner`;
+  listingItem.querySelector(".sellerAvatar").src = listingData.seller.avatar;
+  //
   if (!itemPrice) {
     listingItem.querySelector(".lot-price").innerText = `00.00 ,-`;
   } else {
@@ -102,6 +113,7 @@ function itemViewTemplate(listingData) {
       ".inputPlaceholder"
     ).placeholder = `${userBid}.00 ,-`;
     listingItem.querySelector(".inputLabel").innerText = `${userBid}.00 ,-`;
+    listingItem.querySelector(".inputPlaceholder").min = `${userBid}`;
   } else {
     listingItem.querySelector(".inputPlaceholder").placeholder = `01.00 ,-`;
     listingItem.querySelector(".inputLabel").innerText = `01.00 ,-`;
