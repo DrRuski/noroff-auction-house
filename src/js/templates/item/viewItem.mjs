@@ -1,4 +1,7 @@
 function itemViewTemplate(listingData) {
+  document.querySelector(
+    "li#breadcrumbItem"
+  ).innerText = `${listingData.title}`;
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
   listingItem.classList.add("col-lg-8");
@@ -86,6 +89,8 @@ function itemViewTemplate(listingData) {
   const itemPrice = itemPriceArray.pop();
   let userBid = itemPrice + 1;
   //
+  document.title = listingData.title;
+  //
   if (listingData.media.length > 0) {
     listingItem.querySelector(".lot-image").src = listingData.media;
   } else {
@@ -97,7 +102,9 @@ function itemViewTemplate(listingData) {
   listingItem.querySelector(".lot-description").innerText =
     listingData.description;
   //
-  listingItem.querySelector(".sellerName").innerText = `${listingData.seller.name} - Owner`;
+  listingItem.querySelector(
+    ".sellerName"
+  ).innerText = `${listingData.seller.name} - Owner`;
   listingItem.querySelector(".sellerAvatar").src = listingData.seller.avatar;
   //
   if (!itemPrice) {

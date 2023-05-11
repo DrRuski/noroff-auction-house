@@ -2,6 +2,7 @@ import * as storage from "../../utilities/storage/index.mjs";
 import { userProfileNotExist } from "./guestProfile.mjs";
 
 function userProfileExist(userData) {
+  document.title = userData.name;
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const userPage = document.createElement("div");
   userPage.classList.add(
