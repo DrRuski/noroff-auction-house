@@ -1,10 +1,10 @@
 function ownedItemTemplate(listingData) {
-    const placeholderImage = "../../assets/NFT/placeholderImage.png";
-    const listingItem = document.createElement("div");
-    listingItem.classList.add("col-6", "col-lg-3");
-    listingItem.setAttribute("id", listingData.id);
-    listingItem.dataset.id = listingData.id;
-    listingItem.innerHTML = `
+  const placeholderImage = "../../assets/NFT/placeholderImage.png";
+  const listingItem = document.createElement("div");
+  listingItem.classList.add("col-6", "col-lg-3");
+  listingItem.setAttribute("id", listingData.id);
+  listingItem.dataset.id = listingData.id;
+  listingItem.innerHTML = `
     <div class="card h-100">
     <div class="d-flex flex-column gap-2 shadow">
       <div>
@@ -39,22 +39,19 @@ function ownedItemTemplate(listingData) {
     </div>
   </div>
       `;
-    
-  
-    if (listingData.media.length > 0) {
-      listingItem.querySelector(".lot-image").src = listingData.media;
-    } else {
-      listingItem.querySelector(".lot-image").src = `${placeholderImage}`;
-    }
-    listingItem.querySelector(".lot-title").innerText = listingData.title;
-    listingItem.querySelector(".lot-description").innerText =
-      listingData.description;
-  
-    return listingItem;
-  }
 
-  
-  export function renderOwnedListingItems(listingDataList, parent) {
-      parent.append(...listingDataList.map(ownedItemTemplate));
+  if (listingData.media.length > 0) {
+    listingItem.querySelector(".lot-image").src = listingData.media;
+  } else {
+    listingItem.querySelector(".lot-image").src = `${placeholderImage}`;
   }
-  
+  listingItem.querySelector(".lot-title").innerText = listingData.title;
+  listingItem.querySelector(".lot-description").innerText =
+    listingData.description;
+
+  return listingItem;
+}
+
+export function renderOwnedListingItems(listingDataList, parent) {
+  parent.append(...listingDataList.map(ownedItemTemplate));
+}

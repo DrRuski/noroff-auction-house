@@ -1,6 +1,3 @@
-import * as storage from "../../utilities/storage/index.mjs";
-import { userProfileNotExist } from "../profile/guestProfile.mjs";
-
 function ownedItemTemplate(listingData) {
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
@@ -73,5 +70,5 @@ function ownedItemTemplate(listingData) {
 }
 
 export function renderYourBidsItems(listingDataList, parent) {
-    parent.append(...listingDataList.map(ownedItemTemplate));
+  parent.append(...listingDataList.map(ownedItemTemplate));
 }

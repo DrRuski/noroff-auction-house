@@ -1,6 +1,6 @@
 export function userProfileNotExist() {
   const userPage = document.createElement("div");
-  const placeholderImage = "../../assets/NFT/profileNotFound.png";
+  const placeholderImage = `../../../assets/NFT/profileNotFound.png`;
   userPage.classList.add(
     "row",
     "col-lg-4",
@@ -11,7 +11,7 @@ export function userProfileNotExist() {
   );
   userPage.innerHTML = `
       <div class="d-flex flex-column text-center gap-3 gap-lg-5">
-        <img class="profileNotFound" src="" alt="Profile Not Found">
+        <img class="profileNotFound" src="../../assets/NFT/profileNotFound.png" alt="Profile Not Found">
         <h1>You do not have a profile on this website.</h1>
         <a
           href="/html/registration/index.html"
