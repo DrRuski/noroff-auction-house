@@ -1,9 +1,14 @@
+import {
+  apiBase,
+  apiAllListings,
+} from "../../api/apiEndpoints/apiEndpoints.mjs";
 import * as listings from "../../api/listings/index.mjs";
 import * as templates from "../../templates/index.js";
 import * as search from "../../utilities/search/index.mjs";
+const getAllUrl = `${apiBase}${apiAllListings}?_bids=true&_seller=true`;
 
 export async function renderHome() {
-  const allListings = await listings.getListings();
+  const allListings = await listings.getListings(getAllUrl);
   const searchForm = document.querySelector("input#searchInput");
   const container = document.querySelector("#listingsContainer");
   templates.renderListingItems(allListings, container);

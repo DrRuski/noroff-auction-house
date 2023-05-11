@@ -1,11 +1,17 @@
 import * as storage from "../../utilities/storage/index.mjs";
+import { userProfileNotExist } from "./guestProfile.mjs";
 
-export function userProfile() {
+function userProfileExist(userData) {
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
-  const profile = JSON.parse(storage.load("userProfile"));
-  console.log(profile);
   const userPage = document.createElement("div");
-  userPage.classList.add("row", "col-lg-4", "m-auto", "mt-2", "mt-lg-3", "gap-3");
+  userPage.classList.add(
+    "row",
+    "col-lg-4",
+    "m-auto",
+    "mt-2",
+    "mt-lg-3",
+    "gap-3"
+  );
   userPage.innerHTML = `
     <div class="d-flex justify-content-end">
     <a
@@ -37,18 +43,21 @@ export function userProfile() {
     </p>
   </div>
       `;
-  if (profile.avatar) {
-    userPage.querySelector(".userAvatar").src = profile.avatar;
+  if (userData.avatar) {
+    userPage.querySelector(".userAvatar").src = userData.avatar;
   } else {
     userPage.querySelector(".userAvatar").src = `${placeholderImage}`;
   }
-
-  userPage.querySelector(".nameText").innerText = profile.name;
-
+  userPage.querySelector(".nameText").innerText = userData.name;
   return userPage;
 }
 
-export function renderUserProfile(userData) {
+export function renderUserProfile() {
   const userContainer = document.querySelector("div#userPage");
-  userContainer.append(userProfile(userData));
+  const profile = JSON.parse(storage.load("userProfile"));
+  if (profile) {
+    userContainer.append(userProfileExist(profile));
+  } else {
+    userContainer.append(userProfileNotExist());
+  }
 }

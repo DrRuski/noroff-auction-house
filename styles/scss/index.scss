@@ -30,6 +30,12 @@ body {
   color: $secondary;
 }
 
+.btn-danger {
+  background-color: $secondary;
+  color: $fail;
+  font-weight: 500;
+}
+
 .navbar-color,
 .currencyDisplay,
 .card {

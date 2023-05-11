@@ -11973,6 +11973,12 @@ body {
   color: #242424;
 }
 
+.btn-danger {
+  background-color: #242424;
+  color: #cc6666;
+  font-weight: 500;
+}
+
 .navbar-color,
 .currencyDisplay,
 .card {

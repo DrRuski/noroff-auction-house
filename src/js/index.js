@@ -21,7 +21,9 @@ switch (window.location.pathname) {
   case "/html/collection/index.html":
   case "/html/collection/":
   case "/html/collection":
-    render.renderCollection();
+    render.renderOwnedCollection();
+    render.renderYourBidsCollection();
+    render.renderListedItemsCollection();
     break;
   case "/html/profile/index.html":
   case "/html/profile/":
