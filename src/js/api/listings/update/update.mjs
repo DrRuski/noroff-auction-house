@@ -6,17 +6,16 @@ import {
   updateProfile,
 } from "../../apiEndpoints/apiEndpoints.mjs";
 
-
-export async function bidOnListing(listingData) {
+export async function bidOnListing(bid, id) {
   try {
-    const listingIdURL = `${listingData.id}/bids`;
+    const listingIdURL = `${id}/bids`;
     const response = await fetch(`${apiBase}${listingBid}${listingIdURL}`, {
-      method: "put",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${storage.load("token")}`,
       },
-      body: JSON.stringify(listingData),
+      body: JSON.stringify({ amount: parseInt(bid) }),
     });
 
     return await response.json();
@@ -36,7 +35,7 @@ export async function updateUserProfile(avatar) {
           "Content-Type": "application/json",
           Authorization: `Bearer ${storage.load("token")}`,
         },
-        body: JSON.stringify({"avatar": avatar}),
+        body: JSON.stringify({ avatar: avatar }),
       }
     );
     if (response.ok) {

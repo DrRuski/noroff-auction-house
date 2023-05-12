@@ -1,3 +1,4 @@
+import * as utilities from "./utilities/storage/index.mjs";
 import * as management from "./listeners/index.mjs";
 import * as templates from "./templates/index.js";
 import * as render from "./setupRender/index.mjs";
@@ -51,6 +52,7 @@ if (
   window.location.pathname !== "/html/login/index.html" &&
   window.location.pathname !== "/html/registration/index.html"
 ) {
+  utilities.navbarResizing();
   management.userCurrencyDisplay();
   management.logoutUser();
 }

@@ -2,7 +2,6 @@ import * as storage from "../../utilities/storage/index.mjs";
 import { userProfileNotExist } from "./guestProfile.mjs";
 
 function userProfileExist(userData) {
-  console.log(userData);
   document.title = userData.name;
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const userPage = document.createElement("div");
@@ -43,6 +42,7 @@ function userProfileExist(userData) {
     <p class="descriptionText">
       I am a handsome little testing account that searches for the meaning of life and all things there of.
     </p>
+    <p class="mt-1 mt-lg-2 grayText">P.S This is just a sample text of a user description, there are limitations on the provided API making it impossible to for user description to be modified.</p>
   </div>
       `;
   if (userData.avatar) {
@@ -58,7 +58,6 @@ function userProfileExist(userData) {
 export function renderUserProfile() {
   const userContainer = document.querySelector("div#userPage");
   const profile = JSON.parse(storage.load("userProfile"));
-  console.log(profile);
   if (profile) {
     userContainer.append(userProfileExist(profile));
   } else {

@@ -1,4 +1,5 @@
-function ownedItemTemplate(listingData) {
+function yourBidsTemplate(listingData) {
+  const itemData = listingData.listing;
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
   listingItem.classList.add("col-6", "col-lg-3");
@@ -45,30 +46,27 @@ function ownedItemTemplate(listingData) {
                 </div>
       `;
 
-  const itemPriceArray = listingData.bids.map((price) => {
-    return price.amount;
-  });
 
-  const itemPrice = itemPriceArray.pop();
+  const itemPriceArray = listingData.amount;
 
-  if (listingData.media.length > 0) {
-    listingItem.querySelector(".lot-image").src = listingData.media;
+  if (itemData.media.length > 0) {
+    listingItem.querySelector(".lot-image").src = itemData.media;
   } else {
     listingItem.querySelector(".lot-image").src = `${placeholderImage}`;
   }
-  listingItem.querySelector(".lot-title").innerText = listingData.title;
+  listingItem.querySelector(".lot-title").innerText = itemData.title;
   listingItem.querySelector(".lot-description").innerText =
-    listingData.description;
-  if (!itemPrice) {
+  itemData.description;
+  if (!itemPriceArray) {
     listingItem.querySelector(".lot-price").innerText = `00.00 ,-`;
   } else {
-    listingItem.querySelector(".lot-price").innerText = `${itemPrice}.00 ,-`;
+    listingItem.querySelector(".lot-price").innerText = `${itemPriceArray}.00 ,-`;
   }
-  listingItem.querySelector(".lot-deadline").innerText = listingData.endsAt;
+  listingItem.querySelector(".lot-deadline").innerText = itemData.endsAt;
 
   return listingItem;
 }
 
 export function renderYourBidsItems(listingDataList, parent) {
-  parent.append(...listingDataList.map(ownedItemTemplate));
+  parent.append(...listingDataList.map(yourBidsTemplate));
 }

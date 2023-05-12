@@ -9,9 +9,12 @@ const getAllUrl = `${apiBase}${apiAllListings}?_bids=true&_seller=true`;
 
 export async function renderHome() {
   const allListings = await listings.getListings(getAllUrl);
+  const sortListings = allListings.sort(
+    (a, b) => new Date(a.created) - new Date(b.created)
+  );
   const searchForm = document.querySelector("input#searchInput");
   const container = document.querySelector("#listingsContainer");
-  templates.renderListingItems(allListings, container);
+  templates.renderListingItems(sortListings, container);
   //
   searchForm.addEventListener("input", onSearch);
   //

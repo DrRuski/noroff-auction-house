@@ -1,3 +1,6 @@
+import * as management from "../../listeners/index.mjs"
+
+
 function itemViewTemplate(listingData) {
   document.querySelector(
     "li#breadcrumbItem"
@@ -55,13 +58,13 @@ function itemViewTemplate(listingData) {
           <p class="subtext inputItemInfoText">
             You have to bid at least this much:
           </p>
-          <form action="submit" class="d-flex flex-column gap-2">
+          <form action="submit" class="d-flex flex-column gap-2" id="bidForm">
             <div class="form-floating">
               <input
-                type="text"
+                type="number"
                 id="nftValue"
-                class="form-control shadow inputPlaceholder"
-                name="nftValue"
+                class="form-control shadow priceInputField"
+                name="amount"
                 placeholder=""
                 min=""
                 required
@@ -70,12 +73,7 @@ function itemViewTemplate(listingData) {
                 ></label
               >
             </div>
-            <button
-              type="button"
-              class="d-block btn btn-sm btn-primary w-100 shadow thiccFont"
-            >
-              Submit Bid
-            </button>
+            <button class="d-block btn btn-sm btn-primary w-100 shadow thiccFont">Submit Bid</button>
           </form>
         </div>
         
@@ -117,16 +115,17 @@ function itemViewTemplate(listingData) {
   //
   if (itemPrice) {
     listingItem.querySelector(
-      ".inputPlaceholder"
+      ".priceInputField"
     ).placeholder = `${userBid}.00 ,-`;
     listingItem.querySelector(".inputLabel").innerText = `${userBid}.00 ,-`;
-    listingItem.querySelector(".inputPlaceholder").min = `${userBid}`;
+    listingItem.querySelector(".priceInputField").min = `${userBid}`;
   } else {
-    listingItem.querySelector(".inputPlaceholder").placeholder = `01.00 ,-`;
+    listingItem.querySelector(".priceInputField").placeholder = `01.00 ,-`;
     listingItem.querySelector(".inputLabel").innerText = `01.00 ,-`;
   }
   //
-
+ management.userBid(listingItem, listingData.id)
+  //
   return listingItem;
 }
 

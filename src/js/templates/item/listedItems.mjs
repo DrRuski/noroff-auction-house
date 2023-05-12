@@ -1,3 +1,5 @@
+import * as management from "../../listeners/listingsManagement/removeListing.mjs"
+
 function listedItemsTemplate(listingData) {
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
@@ -44,10 +46,10 @@ function listedItemsTemplate(listingData) {
                         </div>
                     </div>
 
-                    <div class="d-block">
+                    <div>
                         <button 
-                        class="btn btn-sm btn-danger border-danger w-100 unListBtn" 
-                        id=""
+                        class="btn btn-sm btn-danger border-danger w-100" 
+                        id="unListBtn"
                         >Un-list Item</button>
                     </div>
                 </div>
@@ -74,7 +76,7 @@ function listedItemsTemplate(listingData) {
     listingItem.querySelector(".lot-price").innerText = `${itemPrice}.00 ,-`;
   }
   listingItem.querySelector(".lot-deadline").innerText = listingData.endsAt;
-  listingItem.querySelector(".unListBtn").id = listingData.id;
+  management.removeListedItem(listingItem, listingData.id);
   return listingItem;
 }
 

@@ -8,10 +8,12 @@ export function createListingItem() {
       e.preventDefault();
       const createForm = e.target;
       const formData = new FormData(createForm);
-      const mediaFiles = formData.getAll("media"); // Get all media files as an array
+      const mediaFiles = formData.getAll("media");
       const listing = Object.fromEntries(formData.entries());
-      listing.media = mediaFiles; // Add media files array to the listing object
-      createListing(listing);
+      listing.media = mediaFiles;
+      createListing(listing).then(() => {
+          window.location.pathname = "/html/collection/index.html";
+      });
     });
   }
 }
