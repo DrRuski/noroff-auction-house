@@ -17,7 +17,11 @@ export async function bidOnListing(bid, id) {
       },
       body: JSON.stringify({ amount: parseInt(bid) }),
     });
-
+    if (response.ok) {
+      const userProfile = JSON.parse(storage.load("userProfile"));
+      userProfile.credits -= parseInt(bid);
+      storage.save("userProfile", JSON.stringify(userProfile));
+    }
     return await response.json();
   } catch (error) {
     console.log(error);
