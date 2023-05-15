@@ -49,8 +49,8 @@ switch (window.location.pathname) {
     break;
 }
 if (
-  window.location.pathname !== "/login/index.html" &&
-  window.location.pathname !== "/registration/index.html"
+  window.location.pathname !== "/noroff-auction-house/login/index.html" &&
+  window.location.pathname !== "/noroff-auction-house/registration/index.html"
 ) {
   utilities.navbarResizing();
   management.userCurrencyDisplay();
