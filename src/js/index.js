@@ -2,55 +2,55 @@ import * as utilities from "./utilities/storage/index.mjs";
 import * as management from "./listeners/index.mjs";
 import * as templates from "./templates/index.js";
 import * as render from "./setupRender/index.mjs";
-const siteFolder = "/noroff-auction-house";
 
 switch (window.location.pathname) {
-  case `${siteFolder}/login/index.html`:
-  case `${siteFolder}/login/`:
-  case `${siteFolder}/login`:
+  case "/login/index.html":
+  case "/login/":
+  case "/login":
     management.loginListener();
     break;
-  case `${siteFolder}/registration/index.html`:
-  case `${siteFolder}/registration/`:
-  case `${siteFolder}/registration`:
+  case "/registration/index.html":
+  case "/registration/":
+  case "/registration":
     management.regisListener();
     break;
-  case `${siteFolder}/home/index.html`:
-  case `${siteFolder}/home/`:
-  case `${siteFolder}/home`:
+  case "/home/index.html":
+  case "/home/":
+  case "/home":
     render.renderHome();
     break;
-  case `${siteFolder}/collection/index.html`:
-  case `${siteFolder}/collection/`:
-  case `${siteFolder}/collection`:
+  case "/collection/index.html":
+  case "/collection/":
+  case "/collection":
     render.renderOwnedCollection();
     render.renderYourBidsCollection();
     render.renderListedItemsCollection();
     break;
-  case `${siteFolder}/profile/index.html`:
-  case `${siteFolder}/profile/`:
-  case `${siteFolder}/profile`:
+  case "/profile/index.html":
+  case "/profile/":
+  case "/profile":
     templates.renderUserProfile();
     break;
-  case `${siteFolder}/item/sell/index.html`:
-  case `${siteFolder}/item/sell/`:
-  case `${siteFolder}/item/sell`:
+  case "/item/sell/index.html":
+  case "/item/sell/":
+  case "/item/sell":
     management.createListingItem();
     break;
-  case `${siteFolder}/profile/edit/index.html`:
-  case `${siteFolder}/profile/edit/`:
-  case `${siteFolder}/profile/edit`:
+  case "/profile/edit/index.html":
+  case "/profile/edit/":
+  case "/profile/edit":
     management.updateProfile();
     break;
-  case `${siteFolder}/item/view/index.html`:
-  case `${siteFolder}/item/view/`:
-  case `${siteFolder}/item/view`:
+  case "/item/view/index.html":
+  case "/item/view/":
+  case "/item/view":
     render.renderSingleItem();
+
     break;
 }
 if (
-  window.location.pathname !== `${siteFolder}/login/index.html` &&
-  window.location.pathname !== `${siteFolder}/registration/index.html`
+  window.location.pathname !== "/login/index.html" &&
+  window.location.pathname !== "/registration/index.html"
 ) {
   utilities.navbarResizing();
   management.userCurrencyDisplay();
