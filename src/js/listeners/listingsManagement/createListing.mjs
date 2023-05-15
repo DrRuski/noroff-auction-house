@@ -12,7 +12,7 @@ export function createListingItem() {
       const listing = Object.fromEntries(formData.entries());
       listing.media = mediaFiles;
       createListing(listing).then(() => {
-          window.location.pathname = "/html/collection/index.html";
+          window.location.pathname = "/collection/index.html";
       });
     });
   }

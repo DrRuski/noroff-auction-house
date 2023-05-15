@@ -4,53 +4,53 @@ import * as templates from "./templates/index.js";
 import * as render from "./setupRender/index.mjs";
 
 switch (window.location.pathname) {
-  case "/html/login/index.html":
-  case "/html/login/":
+  case "/login/index.html":
+  case "/login/":
   case "/html/login":
     management.loginListener();
     break;
-  case "/html/registration/index.html":
-  case "/html/registration/":
-  case "/html/registration":
+  case "/registration/index.html":
+  case "/registration/":
+  case "/registration":
     management.regisListener();
     break;
-  case "/html/home/index.html":
-  case "/html/home/":
-  case "/html/home":
+  case "/home/index.html":
+  case "/home/":
+  case "/home":
     render.renderHome();
     break;
-  case "/html/collection/index.html":
-  case "/html/collection/":
-  case "/html/collection":
+  case "/collection/index.html":
+  case "/collection/":
+  case "/collection":
     render.renderOwnedCollection();
     render.renderYourBidsCollection();
     render.renderListedItemsCollection();
     break;
-  case "/html/profile/index.html":
-  case "/html/profile/":
-  case "/html/profile":
+  case "/profile/index.html":
+  case "/profile/":
+  case "/profile":
     templates.renderUserProfile();
     break;
-  case "/html/item/sell/index.html":
-  case "/html/item/sell/":
-  case "/html/item/sell":
+  case "/item/sell/index.html":
+  case "/item/sell/":
+  case "/item/sell":
     management.createListingItem();
     break;
-  case "/html/profile/edit/index.html":
-  case "/html/profile/edit/":
-  case "/html/profile/edit":
+  case "/profile/edit/index.html":
+  case "/profile/edit/":
+  case "/profile/edit":
     management.updateProfile();
     break;
-  case "/html/item/view/index.html":
-  case "/html/item/view/":
-  case "/html/item/view":
+  case "/item/view/index.html":
+  case "/item/view/":
+  case "/item/view":
     render.renderSingleItem();
 
     break;
 }
 if (
-  window.location.pathname !== "/html/login/index.html" &&
-  window.location.pathname !== "/html/registration/index.html"
+  window.location.pathname !== "/login/index.html" &&
+  window.location.pathname !== "/registration/index.html"
 ) {
   utilities.navbarResizing();
   management.userCurrencyDisplay();

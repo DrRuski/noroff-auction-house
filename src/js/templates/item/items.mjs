@@ -36,7 +36,7 @@ function itemTemplate(listingData) {
         <div class="d-flex align-items-center gap-2">
           <div>
             <img
-              src="../../assets/Icons/currencyMobileIcon.png"
+              src="../assets/Icons/currencyMobileIcon.png"
               alt=""
               class="img-fluid"/>
           </div>
@@ -45,7 +45,7 @@ function itemTemplate(listingData) {
 
         <div class="d-flex align-items-center gap-2">
           <div>
-            <img src="../../assets/Icons/timeIcon.png" alt="" class="img-fluid" />
+            <img src="../assets/Icons/timeIcon.png" alt="" class="img-fluid" />
           </div>
           <p class="deadline lot-deadline"></p>
         </div>
