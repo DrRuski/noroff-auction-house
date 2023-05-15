@@ -14,7 +14,7 @@ console.log(response);
     if (response.ok) {
       regiSuccess();
       setTimeout(() => {
-        window.location.pathname = "/html/login/index.html";
+        window.location.pathname = "/login/index.html";
       }, 1000);
       return await response.json();
     } else {

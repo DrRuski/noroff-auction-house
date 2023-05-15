@@ -11,7 +11,7 @@ function listedItemsTemplate(listingData) {
         <div class="d-flex flex-column gap-2 shadow">
             <div>
                 <img
-                    src="../../assets/NFT/nftONE.png"
+                    src="../assets/NFT/nftONE.png"
                     alt=""
                     class="img-fluid card-img lot-image"/>
                     </div>
@@ -25,7 +25,7 @@ function listedItemsTemplate(listingData) {
                     <div class="d-flex align-items-center gap-2">
                         <div>
                             <img
-                                src="../../assets/Icons/currencyMobileIcon.png"
+                                src="../assets/Icons/currencyMobileIcon.png"
                                 alt=""
                                 class="img-fluid"/>
                         </div>
@@ -37,7 +37,7 @@ function listedItemsTemplate(listingData) {
                     <div class="d-flex align-items-center gap-2">
                         <div>
                             <img
-                                src="../../assets/Icons/timeIcon.png"
+                                src="../assets/Icons/timeIcon.png"
                                 alt=""
                                 class="img-fluid"/>
                         </div>

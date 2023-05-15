@@ -10,7 +10,7 @@ function yourBidsTemplate(listingData) {
                   <div class="d-flex flex-column gap-2 shadow">
                     <div>
                       <img
-                        src="../../assets/NFT/nftONE.png"
+                        src="../assets/NFT/nftONE.png"
                         alt=""
                         class="img-fluid card-img lot-image"
                       />
@@ -24,7 +24,7 @@ function yourBidsTemplate(listingData) {
                       <div class="d-flex align-items-center gap-2">
                         <div>
                           <img
-                            src="../../assets/Icons/currencyMobileIcon.png"
+                            src="../assets/Icons/currencyMobileIcon.png"
                             alt=""
                             class="img-fluid"
                           />
@@ -34,7 +34,7 @@ function yourBidsTemplate(listingData) {
                       <div class="d-flex align-items-center gap-2">
                         <div>
                           <img
-                            src="../../assets/Icons/timeIcon.png"
+                            src="../assets/Icons/timeIcon.png"
                             alt=""
                             class="img-fluid"
                           />

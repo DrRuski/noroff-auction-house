@@ -19,7 +19,7 @@ export async function userLogin(email, password) {
       storage.save("userProfile", JSON.stringify(profile));
       loginSuccess();
       setTimeout(() => {
-        window.location.pathname = "/html/home/index.html";
+        window.location.pathname = "/home/index.html";
       }, 1000);
       return profile;
     } else {

@@ -15,7 +15,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="../../styles/css/index.css" />
-    <title>Collection</title>
+    <title>Sell Item</title>
   </head>
 
   <body>
@@ -28,7 +28,7 @@
           class="container justify-content-center justify-content-lg-between"
         >
           <div class="d-none d-lg-flex flex-column">
-            <a href="../profile/index.html">
+            <a href="../../profile/index.html">
               <img
                 src="../../assets/slothLogo.png"
                 class="img-fluid"
@@ -50,7 +50,7 @@
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../home/index.html"
+                href="../../home/index.html"
                 ><i class="fa-solid fa-house"></i>Home</a
               >
             </li>
@@ -58,21 +58,21 @@
               <a
                 class="nav-link active d-flex flex-column align-items-center navLink"
                 aria-current="page"
-                href="#"
+                href="../../collection/index.html"
                 ><i class="fa-solid fa-table-cells-large"></i>Collection</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../profile/index.html"
+                href="../../profile/index.html"
                 ><i class="fa-solid fa-user"></i> Profile</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link d-flex flex-column align-items-center navLink"
-                href="../login/index.html"
+                href="../../login/index.html"
                 id="logoutBtn"
                 ><i class="fa-solid fa-door-open"></i>Logout</a
               >
@@ -107,90 +107,104 @@
           </div>
         </div>
 
-        <div class="row mt-lg-2">
-          <div class="col-lg-4 m-auto shadow">
-            <ul
-              class="nav nav-pills nav-fill gap-2 tabNav rounded p-1"
-              id="pills-tab"
-              role="tablist"
-            >
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link shadow active"
-                  id="owned-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#ownedTab"
-                  type="button"
-                  role="tab"
-                  aria-controls="ownedTab"
-                  aria-selected="true"
+        <div class="row">
+          <nav class="d-lg-none" aria-label="breadcrumb" data-bs-theme="dark">
+            <ol class="breadcrumb m-0">
+              <li class="breadcrumb-item">
+                <a
+                  class="d-flex align-items-center gap-2 p-1 breadcrumbLinkStyle"
+                  href="../../collection/index.html"
+                  ><i class="fa-solid fa-chevron-left"></i
+                  ><span>Collection</span></a
                 >
-                  Owned
-                </button>
               </li>
+            </ol>
+          </nav>
 
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="your-bids-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#yourBids"
-                  type="button"
-                  role="tab"
-                  aria-controls="yourBids"
-                  aria-selected="false"
-                >
-                  Your Bids
-                </button>
+          <nav
+            class="d-none d-lg-block mt-2"
+            aria-label="breadcrumb"
+            data-bs-theme="dark"
+          >
+            <ol class="breadcrumb align-items-center">
+              <li class="breadcrumb-item">
+                <a href="../../collection/index.html">Collection</a>
               </li>
-
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link"
-                  id="listed-items-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#listedItems"
-                  type="button"
-                  role="tab"
-                  aria-controls="listedItems"
-                  aria-selected="false"
-                >
-                  Listed Items
-                </button>
+              <li class="breadcrumb-item active" aria-current="page">
+                Item Name
               </li>
-            </ul>
-          </div>
+            </ol>
+          </nav>
         </div>
 
-        <div class="tab-content" id="pills-tabContent">
-          <div
-            class="tab-pane fade show active"
-            id="ownedTab"
-            role="tabpanel"
-            aria-labelledby="pills-home-tab"
-            tabindex="0"
-          >
-            <div class="row row-gap-3" id="ownedItemsContainer"></div>
+        <div class="row col-12 col-lg-4 m-auto">
+          <div class="d-flex align-items-end justify-content-between">
+            <h3>Item Information</h3>
+            <a
+              href="../../collection/index.html"
+              class="btn btn-secondary shadow"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </a>
           </div>
 
-          <div
-            class="tab-pane fade"
-            id="yourBids"
-            role="tabpanel"
-            aria-labelledby="pills-profile-tab"
-            tabindex="0"
-          >
-            <div class="row row-gap-3" id="yourBidsContainer"></div>
+          <div>
+            <hr class="border border-primary border-1 opacity-50" />
           </div>
 
-          <div
-            class="tab-pane fade"
-            id="listedItems"
-            role="tabpanel"
-            aria-labelledby="pills-contact-tab"
-            tabindex="0"
-          >
-            <div class="row row-gap-3" id="listedItemsContainer"></div>
+          <div>
+            <form id="itemInformationForm" data-bs-theme="dark" action="submit">
+              <div class="mb-3">
+                <input
+                  name="media"
+                  type="url"
+                  class="form-control pictureInput"
+                  id="pictureInput"
+                  placeholder="Item URL"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <input
+                  name="title"
+                  type="text"
+                  class="form-control titleInput"
+                  id="titleInput"
+                  placeholder="Item Title"
+                  required
+                  minlength="2"
+                />
+              </div>
+
+              <div class="mb-3">
+                <textarea
+                  name="description"
+                  class="form-control descriptionInput"
+                  id="descriptionInput"
+                  rows="5"
+                  placeholder="Write your item description here..."
+                  minlength="5"
+                ></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="dateDeadline"
+                  ><span class="grayText">Date Deadline</span></label
+                >
+                <input
+                  name="endsAt"
+                  type="date"
+                  class="form-control"
+                  id="dateDeadline"
+                  required
+                />
+              </div>
+
+              <button class="btn btn-primary w-100">
+                <span class="thiccFont">Preview Item</span>
+              </button>
+            </form>
           </div>
         </div>
       </section>
