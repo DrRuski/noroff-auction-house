@@ -2,6 +2,7 @@ import * as management from "../../listeners/index.mjs"
 
 
 function itemViewTemplate(listingData) {
+  console.log(listingData.tags);
   document.querySelector(
     "li#breadcrumbItem"
   ).innerText = `${listingData.title}`;
@@ -12,7 +13,7 @@ function itemViewTemplate(listingData) {
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
   <div class="card h-100">
-    <div class="d-flex flex-column flex-lg-row shadow">
+    <div class="d-flex flex-column flex-lg-row">
       <div>
         <img
           src=""
@@ -32,6 +33,10 @@ function itemViewTemplate(listingData) {
             alt=""
             class="img-fluid sellerAvatar"/>
             <span class="sellerName subtext grayText"></span>
+        </div>
+
+        <div class="d-flex gap-1">
+          <p class="tag"></p>
         </div>
 
         <div class="d-flex align-items-center gap-2">
@@ -104,6 +109,11 @@ function itemViewTemplate(listingData) {
     ".sellerName"
   ).innerText = `${listingData.seller.name} - Owner`;
   listingItem.querySelector(".sellerAvatar").src = listingData.seller.avatar;
+  //
+  listingData.tags.forEach((e) => {
+    listingItem.querySelector(".tag").classList.add("subtext", "tagStyle");
+    listingItem.querySelector(".tag").innerText = `${e}`;
+  });
   //
   if (!itemPrice) {
     listingItem.querySelector(".lot-price").innerText = `00.00 ,-`;

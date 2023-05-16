@@ -1,0 +1,24 @@
+.sellerAvatar {
+  max-width: 24px;
+}
+
+.itemLink {
+  text-decoration: none;
+}
+
+.card:hover {
+  border: 1px solid $primary;
+}
+
+.itemImage,
+.userAvatar {
+  object-fit: cover;
+  max-height: 327px;
+}
+
+.tagStyle {
+  border-radius: 5px;
+  background-color: $card-color;
+  padding: 0.3rem 1rem;
+  color: $tagColor;
+}

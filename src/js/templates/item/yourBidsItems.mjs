@@ -7,7 +7,7 @@ function yourBidsTemplate(listingData) {
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
     <div class="card h-100">
-                  <div class="d-flex flex-column gap-2 shadow">
+                  <div class="d-flex flex-column gap-2">
                     <div>
                       <img
                         src="../assets/NFT/nftONE.png"
@@ -21,6 +21,7 @@ function yourBidsTemplate(listingData) {
                         <p class="card-text lot-description">
                         </p>
                       </div>
+
                       <div class="d-flex align-items-center gap-2">
                         <div>
                           <img

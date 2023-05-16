@@ -6,7 +6,7 @@ function ownedItemTemplate(listingData) {
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
     <div class="card h-100">
-    <div class="d-flex flex-column gap-2 shadow">
+    <div class="d-flex flex-column gap-2">
       <div>
         <a class="itemLink" href="../item/sell/index.html">
           <img
@@ -19,13 +19,11 @@ function ownedItemTemplate(listingData) {
       <div class="card-body d-flex flex-column gap-2 gap-lg-3">
         <div>
           <a class="itemLink" href="../item/sell/index.html">
-            <h3 class="card-title text-white lot-title">WAMEN</h3>
-            <p class="card-text lot-description">
-              Integer maximus facilisis diam, sit amet suscipit
-              massa placerat cursus...
-            </p>
+            <h3 class="card-title text-white lot-title"></h3>
+            <p class="card-text lot-description"></p>
           </a>
         </div>
+  
         <div class="d-block">
           <a
             href="../item/sell/index.html"
@@ -48,7 +46,7 @@ function ownedItemTemplate(listingData) {
   listingItem.querySelector(".lot-title").innerText = listingData.title;
   listingItem.querySelector(".lot-description").innerText =
     listingData.description;
-
+//
   return listingItem;
 }
 

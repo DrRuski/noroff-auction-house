@@ -33,6 +33,10 @@ function itemTemplate(listingData) {
             <span class="sellerName subtext grayText"></span>
         </div>
 
+        <div class="d-flex gap-1">
+          <p class="tag"></p>
+        </div>
+
         <div class="d-flex align-items-center gap-2">
           <div>
             <img
@@ -82,6 +86,12 @@ function itemTemplate(listingData) {
     listingItem.querySelector(".lot-price").innerText = `${itemPrice}.00 ,-`;
   }
   listingItem.querySelector(".lot-deadline").innerText = listingData.endsAt;
+  //
+  listingData.tags.forEach((e) => {
+    listingItem.querySelector(".tag").classList.add("subtext", "tagStyle");
+    listingItem.querySelector(".tag").innerText = `${e}`;
+  });
+  //
 
   return listingItem;
 }

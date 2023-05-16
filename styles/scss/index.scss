@@ -1,6 +1,8 @@
 @import "./components/variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "./components/typography";
+@import "./components/cards";
+@import "./components/form";
 
 body {
   background-color: $primary-background;
@@ -53,10 +55,6 @@ body {
   color: $primary;
 }
 
-.sellerAvatar {
-  max-width: 24px;
-}
-
 // Collections Page
 
 .tabNav {
@@ -65,48 +63,4 @@ body {
 
 .breadcrumbLinkStyle {
   text-decoration: none;
-}
-
-.itemLink {
-  text-decoration: none;
-}
-
-.card:hover {
-  border: 1px solid $primary;
-}
-
-.itemImage,
-.userAvatar {
-  object-fit: cover;
-  max-height: 327px;
-}
-
-// Item Information Form
-
-.pictureInput::placeholder {
-  background-image: url(../../../assets/Icons/pngIcon.png);
-}
-
-.titleInput::placeholder {
-  background-image: url(../../assets/Icons/textIcon.png);
-}
-
-.descriptionInput::placeholder {
-  background-image: url(../../assets/Icons/descriptionIcon.png);
-}
-.priceInput::placeholder {
-  background-image: url(../../assets/Icons/currencyFormIcon.png);
-}
-
-.pictureInput::placeholder,
-.titleInput::placeholder,
-.descriptionInput::placeholder,
-.priceInput::placeholder,
-.userName::placeholder {
-  background-repeat: no-repeat;
-  text-indent: 30px;
-}
-
-.userName::placeholder {
-  background-image: url(../../assets/Icons/userIcon.png);
 }
