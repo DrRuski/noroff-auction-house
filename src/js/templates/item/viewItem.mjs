@@ -1,8 +1,6 @@
-import * as management from "../../listeners/index.mjs"
-
+import * as management from "../../listeners/index.mjs";
 
 function itemViewTemplate(listingData) {
-  console.log(listingData.tags);
   document.querySelector(
     "li#breadcrumbItem"
   ).innerText = `${listingData.title}`;
@@ -134,7 +132,7 @@ function itemViewTemplate(listingData) {
     listingItem.querySelector(".inputLabel").innerText = `01.00 ,-`;
   }
   //
- management.userBid(listingItem, listingData.id)
+  management.userBid(listingItem, listingData.id);
   //
   return listingItem;
 }

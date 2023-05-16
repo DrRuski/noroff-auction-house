@@ -9,9 +9,8 @@ function userProfileExist(userData) {
     "row",
     "col-lg-4",
     "mx-lg-auto",
-    "my-3",
-    "gap-3",
-    "main-content"
+    "my-lg-3",
+    "gap-3"
   );
   userPage.innerHTML = `
     <div class="d-flex justify-content-end">
