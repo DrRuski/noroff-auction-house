@@ -2,6 +2,7 @@ import * as utilities from "./utilities/storage/index.mjs";
 import * as management from "./listeners/index.mjs";
 import * as templates from "./templates/index.js";
 import * as render from "./setupRender/index.mjs";
+import { hideSellButton } from "./utilities/sellButton/sellButton.mjs";
 
 switch (window.location.pathname) {
   case "/login/index.html":
@@ -25,6 +26,7 @@ switch (window.location.pathname) {
     render.renderOwnedCollection();
     render.renderYourBidsCollection();
     render.renderListedItemsCollection();
+    hideSellButton();
     break;
   case "/profile/index.html":
   case "/profile/":
@@ -45,7 +47,6 @@ switch (window.location.pathname) {
   case "/item/view/":
   case "/item/view":
     render.renderSingleItem();
-
     break;
 }
 if (

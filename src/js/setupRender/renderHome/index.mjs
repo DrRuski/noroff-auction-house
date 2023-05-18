@@ -5,7 +5,7 @@ import {
 import * as listings from "../../api/listings/index.mjs";
 import * as templates from "../../templates/index.js";
 import * as search from "../../utilities/search/index.mjs";
-const getAllUrl = `${apiBase}${apiAllListings}?_bids=true&_seller=true`;
+const getAllUrl = `${apiBase}${apiAllListings}?_bids=true&_seller=true&_active=true`;
 
 export async function renderHome() {
   const allListings = await listings.getListings(getAllUrl);

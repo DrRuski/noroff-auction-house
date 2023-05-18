@@ -14,6 +14,7 @@
       src="https://kit.fontawesome.com/e338dcafec.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="icon" href="../assets/Icons/slothIcon.png" />
     <link rel="stylesheet" href="../styles/css/index.css" />
     <title>Collection</title>
   </head>
@@ -83,7 +84,7 @@
     </header>
 
     <main>
-      <section class="container d-flex flex-column gap-2 main-content">
+      <section class="container d-flex flex-column gap-3 main-content">
         <div class="d-lg-none row currencyDisplay sticky-top">
           <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex p-1 text-center">
@@ -107,7 +108,7 @@
           </div>
         </div>
 
-        <div class="row mt-lg-2">
+        <div class="row mt-lg-2 gap-2">
           <div class="col-lg-4 m-auto shadow">
             <ul
               class="nav nav-pills nav-fill gap-2 tabNav rounded p-1"
@@ -116,7 +117,7 @@
             >
               <li class="nav-item" role="presentation">
                 <button
-                  class="nav-link shadow active"
+                  class="nav-link active"
                   id="owned-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#ownedTab"
@@ -160,6 +161,13 @@
               </li>
             </ul>
           </div>
+          <div id="sellButton">
+            <a
+              href="../item/sell/index.html"
+              class="btn btn-primary col-12 col-lg-2"
+              >Sell an Item <i class="fa-solid fa-plus"></i
+            ></a>
+          </div>
         </div>
 
         <div class="tab-content" id="pills-tabContent">
@@ -170,7 +178,7 @@
             aria-labelledby="pills-home-tab"
             tabindex="0"
           >
-            <div class="row row-gap-3" id="ownedItemsContainer"></div>
+            <div class="row g-2" id="ownedItemsContainer"></div>
           </div>
 
           <div
@@ -180,7 +188,7 @@
             aria-labelledby="pills-profile-tab"
             tabindex="0"
           >
-            <div class="row row-gap-3" id="yourBidsContainer"></div>
+            <div class="row g-2" id="yourBidsContainer"></div>
           </div>
 
           <div
@@ -190,7 +198,7 @@
             aria-labelledby="pills-contact-tab"
             tabindex="0"
           >
-            <div class="row row-gap-3" id="listedItemsContainer"></div>
+            <div class="row g-2" id="listedItemsContainer"></div>
           </div>
         </div>
       </section>

@@ -1,5 +1,4 @@
-import * as management from "../../listeners/index.mjs"
-
+import * as management from "../../listeners/index.mjs";
 
 function itemViewTemplate(listingData) {
   document.querySelector(
@@ -7,51 +6,50 @@ function itemViewTemplate(listingData) {
   ).innerText = `${listingData.title}`;
   const placeholderImage = "../../assets/NFT/placeholderImage.png";
   const listingItem = document.createElement("div");
-  listingItem.classList.add("col-lg-8");
+  listingItem.classList.add("col-12", "col-lg-6");
   listingItem.setAttribute("id", listingData.id);
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
   <div class="card h-100">
-    <div class="d-flex flex-column flex-lg-row shadow">
-      <div>
+  
         <img
+          href=""
           src=""
-          alt=""
-          class="img-fluid card-img h-100 itemImage lot-image"/>
-      </div>
-
+          class="image-fluid h-100 card-img lot-image"
+        />
+      
       <div class="card-body d-flex flex-column gap-2">
         <div>
-          <h3 class="card-title text-white lot-title"></h3>
-          <p class="card-text lot-description"></p>
+          <h3 class="card-title lot-title">Test Title</h3>
+          <p class="card-text lot-description">Test Item Description</p>
         </div>
-
+        
         <div class="d-flex align-items-center gap-2">
           <img
+            href=""
             src=""
-            alt=""
-            class="img-fluid sellerAvatar"/>
-            <span class="sellerName subtext grayText"></span>
+            class="image-fluid sellerAvatar"
+          />
+          <p class="m-0 sellerName subtext"></p>
+        </div>
+        
+        <div class="d-flex gap-1">
+          <p class="tag m-0"></p>
+        </div>
+        
+
+        <div class="d-flex align-items-center gap-2">
+          <img src="../../assets/Icons/timeIcon.png"
+              class="img-fluid iconStyle"
+              />
+          <p class="m-0 lot-deadline subtext"></p>
         </div>
 
         <div class="d-flex align-items-center gap-2">
-          <div>
-            <img
-              src="../../assets/Icons/timeIcon.png"
-              alt=""
-              class="img-fluid"/>
-          </div>
-          <p class="deadline lot-deadline"></p>
-        </div>
-
-        <div class="d-flex align-items-center gap-2">
-          <div>
-            <img
-              src="../../assets/Icons/currencyMobileIcon.png"
-              alt=""
-              class="img-fluid"/>
-          </div>
-          <p class="nftValue lot-price"></p>
+          <img src="../../assets/Icons/currencyMobileIcon.png"
+              class="img-fluid iconStyle"
+          />
+          <p class="m-0 lot-price subtext"></p>
         </div>
 
         <div>
@@ -76,9 +74,8 @@ function itemViewTemplate(listingData) {
             <button class="d-block btn btn-sm btn-primary w-100 shadow thiccFont">Submit Bid</button>
           </form>
         </div>
-        
       </div>
-    </div>
+      
   </div>
       `;
   const itemPriceArray = listingData.bids.map((price) => {
@@ -105,6 +102,11 @@ function itemViewTemplate(listingData) {
   ).innerText = `${listingData.seller.name} - Owner`;
   listingItem.querySelector(".sellerAvatar").src = listingData.seller.avatar;
   //
+  listingData.tags.forEach((e) => {
+    listingItem.querySelector(".tag").classList.add("subtext", "tagStyle");
+    listingItem.querySelector(".tag").innerText = `${e}`;
+  });
+  //
   if (!itemPrice) {
     listingItem.querySelector(".lot-price").innerText = `00.00 ,-`;
   } else {
@@ -124,7 +126,7 @@ function itemViewTemplate(listingData) {
     listingItem.querySelector(".inputLabel").innerText = `01.00 ,-`;
   }
   //
- management.userBid(listingItem, listingData.id)
+  management.userBid(listingItem, listingData.id);
   //
   return listingItem;
 }

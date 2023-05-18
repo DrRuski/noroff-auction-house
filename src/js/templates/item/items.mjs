@@ -5,54 +5,52 @@ function itemTemplate(listingData) {
   listingItem.setAttribute("id", listingData.id);
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
+<a class="itemLink" href="">
   <div class="card h-100">
-    <div class="d-flex flex-column h-100">
 
-      <div>
-        <a class="itemLink" href="">
-          <img
-            src=""
-            alt=""
-            class="img-fluid card-img lot-image itemImage"/>
-        </a>
-      </div>
-
-      <div class="card-body d-flex flex-column justify-content-center gap-2">
+        <img
+          href=""
+          src=""
+          class="image-fluid card-img lot-image"
+        />
+      
+      <div class="card-body d-flex flex-column gap-2">
         <div>
-          <a class="itemLink" href="">
-            <h3 class="card-title text-white lot-title"></h3>
-            <p class="card-text lot-description"></p>
-          </a>
+          <h3 class="card-title lot-title">Test Title</h3>
+          <p class="card-text lot-description">Test Item Description</p>
         </div>
-
+        
         <div class="d-flex align-items-center gap-2">
           <img
+            href=""
             src=""
-            alt=""
-            class="img-fluid sellerAvatar"/>
-            <span class="sellerName subtext grayText"></span>
+            class="image-fluid sellerAvatar"
+          />
+          <p class="m-0 sellerName subtext"></p>
+        </div>
+        
+        <div class="d-flex gap-1">
+          <p class="tag m-0"></p>
+        </div>
+        
+
+        <div class="d-flex align-items-center gap-2">
+          <img src="../assets/Icons/timeIcon.png"
+              class="img-fluid iconStyle"
+              />
+          <p class="m-0 lot-deadline subtext"></p>
         </div>
 
         <div class="d-flex align-items-center gap-2">
-          <div>
-            <img
-              src="../assets/Icons/currencyMobileIcon.png"
-              alt=""
-              class="img-fluid"/>
-          </div>
-          <p class="nftValue lot-price"></p>
-        </div>
-
-        <div class="d-flex align-items-center gap-2">
-          <div>
-            <img src="../assets/Icons/timeIcon.png" alt="" class="img-fluid" />
-          </div>
-          <p class="deadline lot-deadline"></p>
+          <img src="../assets/Icons/currencyMobileIcon.png"
+              class="img-fluid iconStyle"
+          />
+          <p class="m-0 lot-price subtext"></p>
         </div>
       </div>
-
-    </div>
+      
   </div>
+</a>
     `;
 
   const itemPriceArray = listingData.bids.map((price) => {
@@ -82,6 +80,12 @@ function itemTemplate(listingData) {
     listingItem.querySelector(".lot-price").innerText = `${itemPrice}.00 ,-`;
   }
   listingItem.querySelector(".lot-deadline").innerText = listingData.endsAt;
+  //
+  listingData.tags.forEach((e) => {
+    listingItem.querySelector(".tag").classList.add("subtext", "tagStyle");
+    listingItem.querySelector(".tag").innerText = `${e}`;
+  });
+  //
 
   return listingItem;
 }

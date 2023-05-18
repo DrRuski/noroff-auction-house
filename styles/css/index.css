@@ -11943,6 +11943,65 @@ textarea.form-control-lg {
     font-weight: 500;
   }
 }
+.itemLink {
+  text-decoration: none;
+}
+.itemLink .card:hover {
+  border: 2px solid #444;
+  box-shadow: #444 0px 4px 12px;
+}
+
+.card {
+  background-color: #242424;
+}
+.card .card-img {
+  object-fit: cover;
+  max-height: 327px;
+}
+.card .card-body .card-title,
+.card .card-body .card-text {
+  color: #eee;
+}
+.card .card-body .tagStyle {
+  border-radius: 5px;
+  background-color: #191919;
+  padding: 0.3rem 1rem;
+  color: #61d5ff;
+}
+.card .card-body .iconStyle,
+.card .card-body .sellerAvatar {
+  max-width: 24px;
+}
+
+.pictureInput::placeholder {
+  background-image: url(../../../assets/Icons/pngIcon.png);
+}
+
+.titleInput::placeholder {
+  background-image: url(../../assets/Icons/textIcon.png);
+}
+
+.descriptionInput::placeholder {
+  background-image: url(../../assets/Icons/descriptionIcon.png);
+}
+
+.priceInput::placeholder {
+  background-image: url(../../assets/Icons/currencyFormIcon.png);
+}
+
+.pictureInput::placeholder,
+.titleInput::placeholder,
+.descriptionInput::placeholder,
+.priceInput::placeholder,
+.userName::placeholder {
+  background-repeat: no-repeat;
+  text-indent: 30px;
+}
+
+.userName::placeholder {
+  background-image: url(../../assets/Icons/userIcon.png);
+}
+
 body {
   background-color: #181818;
   font-family: Roboto, sans-serif;
@@ -11980,24 +12039,17 @@ body {
 }
 
 .navbar-color,
-.currencyDisplay,
-.card {
+.currencyDisplay {
   background-color: #242424;
 }
 
 .nav-link,
-.deadline,
-.nftValue,
 .inputItemInfoText {
   color: #888888;
 }
 
 .active {
   color: #ffb361;
-}
-
-.sellerAvatar {
-  max-width: 24px;
 }
 
 .tabNav {
@@ -12008,47 +12060,9 @@ body {
   text-decoration: none;
 }
 
-.itemLink {
-  text-decoration: none;
-}
-
-.card:hover {
-  border: 1px solid #ffb361;
-}
-
-.itemImage,
 .userAvatar {
   object-fit: cover;
   max-height: 327px;
-}
-
-.pictureInput::placeholder {
-  background-image: url(../../../assets/Icons/pngIcon.png);
-}
-
-.titleInput::placeholder {
-  background-image: url(../../assets/Icons/textIcon.png);
-}
-
-.descriptionInput::placeholder {
-  background-image: url(../../assets/Icons/descriptionIcon.png);
-}
-
-.priceInput::placeholder {
-  background-image: url(../../assets/Icons/currencyFormIcon.png);
-}
-
-.pictureInput::placeholder,
-.titleInput::placeholder,
-.descriptionInput::placeholder,
-.priceInput::placeholder,
-.userName::placeholder {
-  background-repeat: no-repeat;
-  text-indent: 30px;
-}
-
-.userName::placeholder {
-  background-image: url(../../assets/Icons/userIcon.png);
 }
 
 /*# sourceMappingURL=index.css.map */

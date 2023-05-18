@@ -5,39 +5,35 @@ function ownedItemTemplate(listingData) {
   listingItem.setAttribute("id", listingData.id);
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
-    <div class="card h-100">
-    <div class="d-flex flex-column gap-2 shadow">
-      <div>
-        <a class="itemLink" href="../item/sell/index.html">
-          <img
-            src=""
-            alt=""
-            class="img-fluid card-img lot-image"
-          />
-        </a>
-      </div>
-      <div class="card-body d-flex flex-column gap-2 gap-lg-3">
-        <div>
-          <a class="itemLink" href="../item/sell/index.html">
-            <h3 class="card-title text-white lot-title">WAMEN</h3>
-            <p class="card-text lot-description">
-              Integer maximus facilisis diam, sit amet suscipit
-              massa placerat cursus...
-            </p>
-          </a>
-        </div>
-        <div class="d-block">
-          <a
-            href="../item/sell/index.html"
-            class="btn btn-sm btn-secondary border-primary w-100"
-            type="button"
-          >
-            Quick Sell
-          </a>
-        </div>
-      </div>
+<div class="card h-100">
+
+  <img
+    href=""
+    src=""
+    class="image-fluid card-img lot-image"
+  />
+
+  <div class="card-body d-flex flex-column gap-2">
+    <div>
+      <h3 class="card-title lot-title">Test Title</h3>
+      <p class="card-text lot-description">Test Item Description</p>
+    </div>
+    
+    <div class="d-flex align-items-center gap-2">
+      <img
+        href=""
+        src=""
+        class="image-fluid sellerAvatar"
+      />
+      <p class="m-0 sellerName subtext"></p>
+    </div>
+    
+    <div class="d-flex gap-1">
+      <p class="tag m-0"></p>
     </div>
   </div>
+
+</div>
       `;
 
   if (listingData.media.length > 0) {
@@ -48,7 +44,7 @@ function ownedItemTemplate(listingData) {
   listingItem.querySelector(".lot-title").innerText = listingData.title;
   listingItem.querySelector(".lot-description").innerText =
     listingData.description;
-
+//
   return listingItem;
 }
 

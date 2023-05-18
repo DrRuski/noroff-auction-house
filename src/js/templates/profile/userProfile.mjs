@@ -9,9 +9,8 @@ function userProfileExist(userData) {
     "row",
     "col-lg-4",
     "mx-lg-auto",
-    "my-3",
-    "gap-3",
-    "main-content"
+    "my-lg-3",
+    "gap-3"
   );
   userPage.innerHTML = `
     <div class="d-flex justify-content-end">
@@ -42,7 +41,7 @@ function userProfileExist(userData) {
     <p class="descriptionText">
       I am a handsome little testing account that searches for the meaning of life and all things there of.
     </p>
-    <p class="mt-1 mt-lg-2 grayText">P.S This is just a sample text of a user description, there are limitations on the provided API making it impossible to for user description to be modified.</p>
+    <p class="mt-1 mt-lg-2 grayText">P.S This is just a sample text of a user description, there are limitations on the provided API making it impossible for users description to be modified/changed.</p>
   </div>
       `;
   if (userData.avatar) {
