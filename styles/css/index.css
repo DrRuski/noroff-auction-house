@@ -11947,7 +11947,8 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .itemLink .card:hover {
-  border: 2px solid #555;
+  border: 2px solid #444;
+  box-shadow: #444 0px 4px 12px;
 }
 
 .card {
@@ -11957,7 +11958,8 @@ textarea.form-control-lg {
   object-fit: cover;
   max-height: 327px;
 }
-.card .card-body .card-title, .card .card-body .card-text {
+.card .card-body .card-title,
+.card .card-body .card-text {
   color: #eee;
 }
 .card .card-body .tagStyle {
@@ -11966,7 +11968,8 @@ textarea.form-control-lg {
   padding: 0.3rem 1rem;
   color: #61d5ff;
 }
-.card .card-body .iconStyle, .card .card-body .sellerAvatar {
+.card .card-body .iconStyle,
+.card .card-body .sellerAvatar {
   max-width: 24px;
 }
 
