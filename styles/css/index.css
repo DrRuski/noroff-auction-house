@@ -11943,29 +11943,31 @@ textarea.form-control-lg {
     font-weight: 500;
   }
 }
-.sellerAvatar {
-  max-width: 24px;
-}
-
 .itemLink {
   text-decoration: none;
 }
-
-.card:hover {
-  border: 1px solid #ffb361;
+.itemLink .card:hover {
+  border: 2px solid #555;
 }
 
-.itemImage,
-.userAvatar {
+.card {
+  background-color: #242424;
+}
+.card .card-img {
   object-fit: cover;
   max-height: 327px;
 }
-
-.tagStyle {
+.card .card-body .card-title, .card .card-body .card-text {
+  color: #eee;
+}
+.card .card-body .tagStyle {
   border-radius: 5px;
   background-color: #191919;
   padding: 0.3rem 1rem;
   color: #61d5ff;
+}
+.card .card-body .iconStyle, .card .card-body .sellerAvatar {
+  max-width: 24px;
 }
 
 .pictureInput::placeholder {
@@ -12034,14 +12036,11 @@ body {
 }
 
 .navbar-color,
-.currencyDisplay,
-.card {
+.currencyDisplay {
   background-color: #242424;
 }
 
 .nav-link,
-.deadline,
-.nftValue,
 .inputItemInfoText {
   color: #888888;
 }
@@ -12056,6 +12055,11 @@ body {
 
 .breadcrumbLinkStyle {
   text-decoration: none;
+}
+
+.userAvatar {
+  object-fit: cover;
+  max-height: 327px;
 }
 
 /*# sourceMappingURL=index.css.map */

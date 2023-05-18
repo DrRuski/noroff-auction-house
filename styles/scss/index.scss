@@ -39,14 +39,11 @@ body {
 }
 
 .navbar-color,
-.currencyDisplay,
-.card {
+.currencyDisplay {
   background-color: #242424;
 }
 
 .nav-link,
-.deadline,
-.nftValue,
 .inputItemInfoText {
   color: #888888;
 }
@@ -63,4 +60,11 @@ body {
 
 .breadcrumbLinkStyle {
   text-decoration: none;
+}
+
+// Profile Page
+
+.userAvatar {
+  object-fit: cover;
+  max-height: 327px;
 }

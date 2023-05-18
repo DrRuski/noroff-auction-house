@@ -7,55 +7,49 @@ function listedItemsTemplate(listingData) {
   listingItem.setAttribute("id", listingData.id);
   listingItem.dataset.id = listingData.id;
   listingItem.innerHTML = `
-    <div class="card h-100">
-        <div class="d-flex flex-column gap-2 shadow">
-            <div>
-                <img
-                    src="../assets/NFT/nftONE.png"
-                    alt=""
-                    class="img-fluid card-img lot-image"/>
-                    </div>
+<div class="card h-100">
 
-                <div class="card-body d-flex flex-column gap-2">
-                    <div>
-                        <h3 class="card-title text-white lot-title"></h3>
-                        <p class="card-text lot-description"></p>
-                    </div>
+  <img
+    href=""
+    src=""
+    class="image-fluid card-img lot-image"
+  />
 
-                    <div class="d-flex align-items-center gap-2">
-                        <div>
-                            <img
-                                src="../assets/Icons/currencyMobileIcon.png"
-                                alt=""
-                                class="img-fluid"/>
-                        </div>
-                        <div>
-                            <p class="nftValue lot-price"></p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center gap-2">
-                        <div>
-                            <img
-                                src="../assets/Icons/timeIcon.png"
-                                alt=""
-                                class="img-fluid"/>
-                        </div>
-                        <div>
-                            <p class="deadline lot-deadline"></p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <button 
-                        class="btn btn-sm btn-danger border-danger w-100" 
-                        id="unListBtn"
-                        >Un-list Item</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="card-body d-flex flex-column gap-2">
+    <div>
+      <h3 class="card-title lot-title">Test Title</h3>
+      <p class="card-text lot-description">Test Item Description</p>
     </div>
+    
+    <div class="d-flex gap-1">
+      <p class="tag m-0"></p>
+    </div>
+    
+
+    <div class="d-flex align-items-center gap-2">
+      <img src="../assets/Icons/timeIcon.png"
+          class="img-fluid iconStyle"
+          />
+      <p class="m-0 lot-deadline subtext"></p>
+    </div>
+
+    <div class="d-flex align-items-center gap-2">
+      <img src="../assets/Icons/currencyMobileIcon.png"
+          class="img-fluid iconStyle"
+      />
+      <p class="m-0 lot-price subtext"></p>
+    </div>
+
+    
+    <button 
+      class="btn btn-sm btn-danger border-danger" 
+      id="unListBtn"
+      >Un-list Item
+    </button>
+    
+  </div>
+
+</div>
       `;
 
   const itemPriceArray = listingData.bids.map((price) => {

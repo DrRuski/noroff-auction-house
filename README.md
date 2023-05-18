@@ -4,14 +4,23 @@
 
 ### Table of Contents
 
-1. Getting Started.
+1. Try Website Demo.
+2. Getting Started.
 
-## 1. Getting Started
+## 1. Try Website Demo
+
+Email:
+`DemoEmail123@stud.noroff.no`
+
+Password:
+`DemoPassword123`
+
+## 2. Getting Started
 
 1. Clone the repo through github website or CLI command:
 
 ```
-git clone https://github.com/DrRuski/social-media-client.git
+git clone https://github.com/DrRuski/noroff-auction-house.git
 ```
 
 2. Run `npm install` to install all dependencies.
