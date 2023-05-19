@@ -29,10 +29,14 @@ When a new user joins the website, they are given 1000 credits to use on the sit
 
 ### 1.2 Technical restrictions
 
-1. Must use an approved `CSS Framework` - ![Bootstrap](https://github.com/DrRuski/noroff-auction-house/assets/96174153/85d3c84f-9d3b-45fc-b1f7-92585c4abd17)
-2. Must be hosted on an approved `Static Host` - ![Github](https://github.com/DrRuski/noroff-auction-house/assets/96174153/380d814f-2aee-4b21-b1b6-f35540367622)
-3. Must use an approved `Design Application` - ![Figma](https://github.com/DrRuski/noroff-auction-house/assets/96174153/0bc0e95f-4ad1-42d8-8d00-2e8e7100c542)
-4. Must use an approved `Planning Application` - ![Github](https://github.com/DrRuski/noroff-auction-house/assets/96174153/dbb25606-8897-4a1c-8b75-af4e5cd23651)
+1. Must use an approved `CSS Framework` - ![Bootstrap](https://github.com/DrRuski/noroff-auction-house/assets/96174153/df99dfd0-6948-415a-8665-ce684bda089f)
+
+2. Must be hosted on an approved `Static Host` - ![Github](https://github.com/DrRuski/noroff-auction-house/assets/96174153/140bc40e-f1bb-4a3e-97d6-9b953e7014b9)
+
+3. Must use an approved `Planning Application` - ![Github](https://github.com/DrRuski/noroff-auction-house/assets/96174153/72d3526e-eadf-44c7-8619-39ace3568ab2)
+
+4. Must use an approved `Design Application` - ![Figma](https://github.com/DrRuski/noroff-auction-house/assets/96174153/64b11e2d-f010-4969-b237-44db91a55e79)
+
 
 ## 2. Website Demo
 
