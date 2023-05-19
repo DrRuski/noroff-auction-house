@@ -29,10 +29,10 @@ When a new user joins the website, they are given 1000 credits to use on the sit
 
 ### 1.2 Technical restrictions
 
-1. Must use an approved `CSS Framework` - 
-2. Must be hosted on an approved `Static Host` - 
-3. Must use an approved `Design Application` - 
-4. Must use an approved `Planning Application` -
+1. Must use an approved `CSS Framework` - ![Bootstrap](https://github.com/DrRuski/noroff-auction-house/assets/96174153/853ad50e-9f12-4c57-8a76-0c0f9525dcb9)
+2. Must be hosted on an approved `Static Host` - ![Github](https://github.com/DrRuski/noroff-auction-house/assets/96174153/fc2a8494-8a97-41fe-8e9a-6e203e8b159f)
+3. Must use an approved `Design Application` - ![Figma](https://github.com/DrRuski/noroff-auction-house/assets/96174153/e6ead403-6847-4316-a383-bf94a6f4d5e9)
+4. Must use an approved `Planning Application` - ![Github](https://github.com/DrRuski/noroff-auction-house/assets/96174153/fc2a8494-8a97-41fe-8e9a-6e203e8b159f)
 
 ## 2. Website Demo
 
