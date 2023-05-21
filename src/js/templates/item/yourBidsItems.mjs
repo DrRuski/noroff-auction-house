@@ -46,7 +46,7 @@ function yourBidsTemplate(listingData) {
   const itemPriceArray = listingData.amount;
 
   if (itemData.media.length > 0) {
-    listingItem.querySelector(".lot-image").src = itemData.media;
+    listingItem.querySelector(".lot-image").src = itemData.media[0];
   } else {
     listingItem.querySelector(".lot-image").src = `${placeholderImage}`;
   }
