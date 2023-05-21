@@ -57,7 +57,7 @@ function listedItemsTemplate(listingData) {
   });
   const itemPrice = itemPriceArray.pop();
   if (listingData.media.length > 0) {
-    listingItem.querySelector(".lot-image").src = listingData.media;
+    listingItem.querySelector(".lot-image").src = listingData.media[0];
   } else {
     listingItem.querySelector(".lot-image").src = `${placeholderImage}`;
   }

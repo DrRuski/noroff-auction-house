@@ -1,7 +1,9 @@
 import { createListing } from "../../api/listings/index.mjs";
+import { addMedia } from "../../utilities/addMediaInput/addMediaInput.mjs";
 
 export function createListingItem() {
   const createForm = document.querySelector("form#itemInformationForm");
+  addMedia();
 
   if (createForm) {
     createForm.addEventListener("submit", (e) => {
@@ -12,7 +14,7 @@ export function createListingItem() {
       const listing = Object.fromEntries(formData.entries());
       listing.media = mediaFiles;
       createListing(listing).then(() => {
-          window.location.pathname = "/collection/index.html";
+        window.location.pathname = "/collection/index.html";
       });
     });
   }
