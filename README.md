@@ -29,13 +29,13 @@ When a new user joins the website, they are given 1000 credits to use on the sit
 
 ### 1.2 Technical restrictions
 
-1. Must use an approved `CSS Framework` - ![Bootstrap](assets\readmeAssets\Bootstrap.svg)
+1. Must use an approved `CSS Framework` - ![Bootstrap](./assets/readmeAssets/Bootstrap.svg)
 
-2. Must be hosted on an approved `Static Host` - ![Github](assets\readmeAssets\Github.svg)
+2. Must be hosted on an approved `Static Host` - ![Github](./assets/readmeAssets/Github.svg)
 
-3. Must use an approved `Planning Application` - ![Github](assets\readmeAssets\Github.svg)
+3. Must use an approved `Planning Application` - ![Github](./assets/readmeAssets/Github.svg)
 
-4. Must use an approved `Design Application` - ![Figma](assets\readmeAssets\Figma.svg)
+4. Must use an approved `Design Application` - ![Figma](./assets/readmeAssets/Figma.svg)
 
 
 ## 2. Website Demo
