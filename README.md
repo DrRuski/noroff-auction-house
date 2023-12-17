@@ -2,6 +2,11 @@
 
 # Noroff Auction House - Semester Project 2
 
+|                                                 Home                                                 |                                               Item                                                |
+| :--------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
+|  ![home](https://github.com/DrRuski/noroff-auction-house/assets/96174153/4fa2c6ee-6cad-4939-8972-65d173c635b8)  |  ![item](https://github.com/DrRuski/noroff-auction-house/assets/96174153/02a1575b-1ec4-454e-98f8-f93b73b1ca54)  |
+|                                             Collection                                             |                                           Profile                                           |
+|  ![collection](https://github.com/DrRuski/noroff-auction-house/assets/96174153/f672c769-5861-420a-9f7f-0ffbab944f28)  |  ![profile](https://github.com/DrRuski/noroff-auction-house/assets/96174153/42511c5c-4b2e-4068-9c0e-0706c8e385c9)  |
 
 ### Table of Contents
 
